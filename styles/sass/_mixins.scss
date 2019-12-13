@@ -5,5 +5,19 @@ $circleGreen: #abf2e5;
 $circleOrange: #facba0;
 $primaryPink: #fab0aa;
 $primaryText: #28304e;
+$blueBackground: #f7fbff;
 
 // from page_services and home startup
+
+@mixin forPhone {
+  @media (max-width: 599px) { @content; }
+}
+@mixin forTablet {
+  @media (max-width: 900px) { @content; }
+}
+@mixin forDesktop {
+  @media (max-width: 1400px) { @content; }
+}
+@mixin forBigDesktop {
+  @media (min-width: 1401px) { @content; }  
+}

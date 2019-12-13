@@ -1,5 +1,8 @@
-.about {
+.aboutSection {
     display: flex;
+    // background: url(../assets/lineBackground.png);
+    // background-size: contain;
+    // background-attachment: fixed;
 
     img {
         border-radius: 50%;
@@ -19,7 +22,10 @@
 .skills {
     text-align: center;
     padding: 5%;
-    background: rgba(165, 165, 165, 0.5);
+    // background: rgba(165, 165, 165, 0.5);
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../assets/lineBackground.png);
+    background-size: cover;
+    background-attachment: fixed;
 
     .icons {
         display: flex;
@@ -36,4 +42,84 @@
         }
     }
 }
+}
+
+.projects {
+    h2 {
+        text-align: center;
+        margin: 40px;
+    }
+}
+
+// body {
+//     // background: url(../assets/lineBackground.png);
+//     // background-size: contain;
+//     // background-attachment: fixed;
+// }
+
+.blueCircle {
+    position: absolute;
+    animation: circles 5s linear infinite;
+}
+
+@keyframes circles {
+from {
+        top: 0;
+        left: 0;
+    }
+
+    to {
+        top: 50%;
+        left: 50%;
+    }
+
+    to {
+        bottom: 0;
+        right: 0;
+    }
+}
+
+.purpleCircle {
+    position: absolute;
+    animation: circles 10s linear infinite;
+}
+.smallGreenCircle {
+    position: absolute;
+    animation: circles 10s linear infinite;
+}
+.pinkCircle {
+    position: absolute;
+    animation: circles 10s linear infinite;
+
+}
+.orangeCircle {
+    position:absolute;
+    animation: circles 20s linear infinite;
+
+}
+.bigGreenCirclefrom {
+    position: absolute;
+    animation: circles 12s linear infinite;
+
+}
+
+.mockup {
+    width: 100%;
+    display: flex;
+}
+
+.mockupImage, .projectText {
+    width: 50%;
+}
+
+i {
+    display: inline-block;
+    &:hover {
+        transform: scale(1.25);
+        text-shadow: goldenrod 1px 1px;
+    }
+}
+
+.about h2 {
+    text-align: center;
 }
