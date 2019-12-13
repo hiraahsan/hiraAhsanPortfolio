@@ -1,0 +1,40 @@
+header {
+    background: url(../assets/headerBackground.png);
+    height:100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+
+    h1 {
+        text-align: center;
+        font-size: 8rem;
+        font-family: 'Lilita One', cursive;
+    }
+
+    h3 {
+        text-align: center;
+    }
+}
+
+nav {
+    background: black;
+    color: white;
+
+    ul {
+        display: flex;
+        justify-content: flex-end;
+
+        li {
+            padding: 10px;
+
+            &:hover {
+                background: $primaryPink;   
+            }
+        }
+    }
+}
+
+svg {
+    display: none;
+}
