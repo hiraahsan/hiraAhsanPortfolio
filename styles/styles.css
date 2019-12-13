@@ -208,11 +208,18 @@ img {
 }
 
 header {
-  background: url(../assets/headerBackground.png);
+  background: url(../assets/header.jpg);
   height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 header h1 {
@@ -226,6 +233,9 @@ header h3 {
 }
 
 nav {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  width: 100%;
   background: black;
   color: white;
 }
@@ -245,6 +255,17 @@ nav ul li {
 
 nav ul li:hover {
   background: #fab0aa;
+}
+
+.headerContainer {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.5)));
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+  width: 100%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 
 svg {
