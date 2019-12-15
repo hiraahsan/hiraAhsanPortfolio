@@ -207,6 +207,11 @@ img {
   display: block;
 }
 
+.wrapper {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
 header {
   height: 100vh;
   background-size: cover;
@@ -271,7 +276,6 @@ nav ul li:hover {
   top: 35%;
   left: 0;
   right: 0;
-  bottom: 0;
 }
 
 .wave {
@@ -359,10 +363,57 @@ nav ul li:hover {
   margin: 40px;
 }
 
+.projects p {
+  margin-bottom: 20px;
+}
+
+.projects a {
+  background: gray;
+  border: 2px solid black;
+  padding: 5px 10px;
+  border-radius: 2px;
+}
+
+.projects a:hover {
+  background: black;
+  color: white;
+  border: 2px solid gray;
+}
+
 .blueCircle {
   position: absolute;
-  -webkit-animation: circles 5s linear infinite;
-          animation: circles 5s linear infinite;
+  -webkit-animation: circlesBottom 10s linear infinite;
+          animation: circlesBottom 10s linear infinite;
+}
+
+@-webkit-keyframes circlesBottom {
+  from {
+    bottom: 0;
+    left: 0;
+  }
+  to {
+    bottom: 50%;
+    left: 50%;
+  }
+  to {
+    top: 0;
+    right: 0;
+  }
+}
+
+@keyframes circlesBottom {
+  from {
+    bottom: 0;
+    left: 0;
+  }
+  to {
+    bottom: 50%;
+    left: 50%;
+  }
+  to {
+    top: 0;
+    right: 0;
+  }
 }
 
 @-webkit-keyframes circles {
@@ -395,10 +446,56 @@ nav ul li:hover {
   }
 }
 
+@-webkit-keyframes circlesAlternate {
+  from {
+    top: 0;
+    right: 0;
+  }
+  to {
+    top: 25%;
+    right: 25%;
+  }
+  to {
+    top: 50%;
+    right: 50%;
+  }
+  to {
+    top: 70%;
+    right: 70%;
+  }
+  to {
+    bottom: 0;
+    left: 0;
+  }
+}
+
+@keyframes circlesAlternate {
+  from {
+    top: 0;
+    right: 0;
+  }
+  to {
+    top: 25%;
+    right: 25%;
+  }
+  to {
+    top: 50%;
+    right: 50%;
+  }
+  to {
+    top: 70%;
+    right: 70%;
+  }
+  to {
+    bottom: 0;
+    left: 0;
+  }
+}
+
 .purpleCircle {
   position: absolute;
-  -webkit-animation: circles 10s linear infinite;
-          animation: circles 10s linear infinite;
+  -webkit-animation: circlesAlternate 20s linear infinite;
+          animation: circlesAlternate 20s linear infinite;
 }
 
 .smallGreenCircle {
@@ -419,10 +516,10 @@ nav ul li:hover {
           animation: circles 20s linear infinite;
 }
 
-.bigGreenCirclefrom {
+.bigGreenCircle {
   position: absolute;
-  -webkit-animation: circles 12s linear infinite;
-          animation: circles 12s linear infinite;
+  -webkit-animation: circlesAlternate 12s linear infinite;
+          animation: circlesAlternate 12s linear infinite;
 }
 
 .mockup {
@@ -448,4 +545,31 @@ i:hover {
 
 .about h2 {
   text-align: center;
+}
+
+.contact {
+  background: #28304e;
+  text-align: center;
+  height: auto;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.contact .contactInfo {
+  width: 40%;
+}
+
+.contact form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 40%;
 }

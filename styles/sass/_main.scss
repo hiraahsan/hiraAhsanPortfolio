@@ -49,17 +49,44 @@
         text-align: center;
         margin: 40px;
     }
-}
 
-// body {
-//     // background: url(../assets/lineBackground.png);
-//     // background-size: contain;
-//     // background-attachment: fixed;
-// }
+    p {
+        margin-bottom: 20px;
+    }
+
+    a {
+        background: gray;
+        border: 2px solid black;
+        padding: 5px 10px;
+        border-radius: 2px;
+        &:hover {
+            background: black;
+            color: white;
+            border: 2px solid gray;
+        }
+    }
+}
 
 .blueCircle {
     position: absolute;
-    animation: circles 5s linear infinite;
+    animation: circlesBottom 10s linear infinite;
+}
+
+@keyframes circlesBottom {
+from {
+        bottom: 0;
+        left: 0;
+    }
+
+    to {
+        bottom: 50%;
+        left: 50%;
+    }
+
+    to {
+        top: 0;
+        right: 0;
+    }
 }
 
 @keyframes circles {
@@ -79,9 +106,36 @@ from {
     }
 }
 
+@keyframes circlesAlternate {
+    from {
+        top: 0;
+        right: 0;
+    }
+
+    to {
+        top: 25%;
+        right: 25%;
+    }
+
+    to {
+        top: 50%;
+        right: 50%;
+    }
+
+    to {
+        top: 70%;
+        right: 70%;
+    }
+
+    to {
+        bottom: 0;
+        left: 0;
+    }
+}
+
 .purpleCircle {
     position: absolute;
-    animation: circles 10s linear infinite;
+    animation: circlesAlternate 20s linear infinite;
 }
 .smallGreenCircle {
     position: absolute;
@@ -97,9 +151,9 @@ from {
     animation: circles 20s linear infinite;
 
 }
-.bigGreenCirclefrom {
+.bigGreenCircle {
     position: absolute;
-    animation: circles 12s linear infinite;
+    animation: circlesAlternate 12s linear infinite;
 
 }
 
@@ -122,4 +176,23 @@ i {
 
 .about h2 {
     text-align: center;
+}
+
+.contact {
+    background: $navyBackground;
+    text-align: center;
+    height: auto;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+
+    .contactInfo {
+        width: 40%;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+    }
 }
