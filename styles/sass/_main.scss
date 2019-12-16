@@ -1,8 +1,9 @@
 .aboutSection {
     display: flex;
-    // background: url(../assets/lineBackground.png);
-    // background-size: contain;
-    // background-attachment: fixed;
+
+    @include forSmallTablet {
+        flex-wrap: wrap;
+    }
 
     img {
         border-radius: 50%;
@@ -11,11 +12,19 @@
     .aboutImage {
         width: 50%;
         padding: 5%;
+
+        @include forSmallTablet {
+            width: 100%;
+        }
     }
 
     .aboutText {
         width: 50%;
         padding: 5%;
+
+        @include forSmallTablet {
+            width: 100%;
+        }
     }
 }
 
@@ -33,9 +42,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
-
 
 h2, h3 {
     position: relative;
@@ -55,13 +62,26 @@ h2, h3 {
     }
 }
 
+main {
+    overflow: hidden;
+}
+
+h3 {
+    position: relative;
+    display: inline-block;
+    z-index: 0;
+}
+
 .skills {
     text-align: center;
     padding: 5%;
-    // background: rgba(165, 165, 165, 0.5);
     background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../assets/lineBackground.png);
     background-size: cover;
     background-attachment: fixed;
+
+    @include forTablet {
+        background: none;
+    }
 
     .icons {
         display: flex;
@@ -73,6 +93,14 @@ h2, h3 {
         
      .icon {
         padding: 50px;
+
+        @include forTablet {
+            padding: 30px;
+        }
+
+        @include forPhone {
+            padding: 20px;
+        }
         i {
             font-size: 6rem;
         }
@@ -91,15 +119,21 @@ h2, h3 {
     }
 
     a {
-        background: gray;
-        border: 2px solid black;
-        padding: 5px 10px;
-        border-radius: 2px;
+        background: $navyBackground;
+        border: 2px solid $primaryPink;
+        padding: 7px 12px;
+        border-radius: 25px;
+        color: $primaryPink;
+
         &:hover {
-            background: black;
-            color: white;
-            border: 2px solid gray;
+            background: $primaryPink;
+            color: $navyBackground;
+            border: 2px solid $navyBackground;
         }
+    }
+
+    .mockup {
+        margin: 50px 0;
     }
 }
 
@@ -108,22 +142,22 @@ h2, h3 {
     animation: circlesBottom 10s linear infinite;
 }
 
-@keyframes circlesBottom {
-from {
-        bottom: 0;
-        left: 0;
-    }
+// @keyframes circlesBottom {
+// from {
+//         bottom: 0;
+//         left: 0;
+//     }
 
-    to {
-        bottom: 50%;
-        left: 50%;
-    }
+//     to {
+//         bottom: 50%;
+//         left: 50%;
+//     }
 
-    to {
-        top: 0;
-        right: 0;
-    }
-}
+//     to {
+//         bottom: 20%;
+//         left: 20%;
+//     }
+// }
 
 @keyframes circles {
 from {
@@ -132,42 +166,52 @@ from {
     }
 
     to {
+        top: 20%;
+        left: 20%;
+    }
+
+    to {
         top: 50%;
         left: 50%;
     }
 
     to {
-        bottom: 0;
-        right: 0;
+        top: 20%;
+        left: 20%;
     }
 }
 
-@keyframes circlesAlternate {
-    from {
-        top: 0;
-        right: 0;
-    }
+// @keyframes circlesAlternate {
+//     from {
+//         top: 0;
+//         right: 0;
+//     }
 
-    to {
-        top: 25%;
-        right: 25%;
-    }
+//     to {
+//         top: 25%;
+//         right: 25%;
+//     }
 
-    to {
-        top: 50%;
-        right: 50%;
-    }
+//     to {
+//         top: 50%;
+//         right: 50%;
+//     }
 
-    to {
-        top: 70%;
-        right: 70%;
-    }
+//     to {
+//         top: 70%;
+//         right: 70%;
+//     }
 
-    to {
-        bottom: 0;
-        left: 0;
-    }
-}
+//     to {
+//         top: 50%;
+//         right: 50%;
+//     }
+
+//     to {
+//         top: 20%;
+//         right: 20%;
+//     }
+// }
 
 .purpleCircle {
     position: absolute;
@@ -196,17 +240,34 @@ from {
 .mockup {
     width: 100%;
     display: flex;
+
+    @include forTablet {
+        flex-wrap: wrap;
+    }
+
+    &.reverseSection {
+        flex-direction: row-reverse;
+
+        @include forTablet {
+            flex-direction: row;
+        }
+    }
 }
 
 .mockupImage, .projectText {
-    width: 45%; 
+    width: 50%; 
+    padding: 20px 50px;
+
+    @include forTablet {
+        width: 100%;
+    }
 }
 
 i {
     display: inline-block;
     &:hover {
         transform: scale(1.25);
-        text-shadow: goldenrod 1px 1px;
+        // text-shadow: goldenrod 1px 1px;
     }
 }
 
@@ -219,15 +280,29 @@ i {
     text-align: center;
     height: auto;
     color: white;
+    padding: 50px;
     display: flex;
     justify-content: space-around;
 
+    @include forPhone {
+        flex-wrap:wrap;
+    }
+
     .contactInfo {
         width: 30%;
+
+        @include forPhone {
+            width: 100%;
+            text-align: left;
+            margin-bottom: 30px;
+        }
     }
 
     .formSection {
         width:70%;
+        @include forPhone {
+            width: 100%;
+        }
     }
 
     form {
@@ -270,4 +345,6 @@ i {
     top:0;
     right:0;
     z-index: 1;
+    position: fixed;
 }
+

@@ -13,9 +13,15 @@ $blueBackground: #f7fbff;
 @mixin forPhone {
   @media (max-width: 599px) { @content; }
 }
+
+@mixin forSmallTablet {
+  @media (max-width: 750px) { @content; }
+}
+
 @mixin forTablet {
   @media (max-width: 900px) { @content; }
 }
+
 @mixin forDesktop {
   @media (max-width: 1400px) { @content; }
 }

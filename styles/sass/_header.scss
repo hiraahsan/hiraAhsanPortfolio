@@ -1,5 +1,4 @@
 header {
-    // background: url(../assets/header.jpg);
     height:100vh;
     background-size: cover;
     background-repeat: no-repeat;
@@ -7,12 +6,17 @@ header {
     display: flex;
     flex-direction: column;
     position: relative;
+    align-items: center;
 
 
     h1 {
         text-align: center;
         font-size: 8rem;
         font-family: 'Lobster', cursive;
+
+        @include forPhone {
+            font-size: 6rem;
+        }
     }
 
     h3 {
@@ -21,72 +25,73 @@ header {
     }
 }
 
+.fas.fa-bars {
+    z-index: 2;
+    display: none;
+}
+
 input[type="checkbox"] {
     display: none;
 }
 
-input[type="checkbox"]:checked + .sidebar nav {
-    right: 0;
-    display: block;
-}
-
-
+// input[type="checkbox"]:checked + .sidebar nav {
+//     right: 0;
+//     display: block;
+//     z-index: 1;
+//     transition: all 1s ease;
+// }
 
 nav {
-    align-self: flex-start;
-    width: 30%;
-    background: black;
-    color: white;
+    // align-self: flex-start;
+    background: inherit;
+    color: $navyBackground;
     position: absolute;
-    right: -30%;
-    display: none;
+    // display: none;
+    position: fixed;
+    // top: 20%;
+    right: 0;
 
     ul {
         display: flex;
-        flex-direction: column;
-        // justify-content: flex-end;
+        align-content: center;
+        // flex-direction: column;
 
         li {
-            padding: 10px;
+            padding: 30px 10px;
 
             &:hover {
-                background: $primaryPink;   
+                background: $primaryPink;  
+                border-radius: 5px; 
+            }
+
+            a {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-shadow: 2px 2px $primaryPink;
             }
         }
     }
 }
 
-.fas.fa-bars:active + nav {
-    display: block;
-
-}
-
-
-
-
-
 .headerContainer {
-    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
-    width: 100%;
+    // background: linear-gradient(rgba(118, 116, 116, 0.5), rgba(155, 155, 155, 0.5));
+    background: $primaryPink;
+    width: 50%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
     align-self: center;
     justify-self: center;
     position:absolute;
     top:35%;
     left:0;
     right:0;
-}
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 10px;
 
-.wave {
-    display: inline-block;
-    animation: wave 2s linear 5;
-}
-
-@keyframes wave {
-    from {
-        transform: none;
-    }
-
-    to {
-        transform: rotate(45deg);
+    h4 {
+        font-family: "Playfair Display", cursive;
     }
 }

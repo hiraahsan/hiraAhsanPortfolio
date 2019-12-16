@@ -1,8 +1,5 @@
-app = {}
+AOS.init();
 
-
-app.init();
-
-$(document).ready(function() {
-app.init();
-});
+AOS.init({
+    disable: "mobile",
+})

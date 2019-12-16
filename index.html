@@ -6,9 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hira Ahsan</title>
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
-<link rel="manifest" href="./assets/site.webmanifest">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+    <link rel="manifest" href="./assets/site.webmanifest">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     
     <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat|Playfair+Display&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Allura&display=swap" rel="stylesheet">
@@ -19,10 +21,6 @@
 
     <link rel="stylesheet"
         href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
-
-
-
-    
     <link rel="stylesheet" href="styles/styles.css">
     <script src="https://kit.fontawesome.com/df92119142.js" crossorigin="anonymous"></script>
 
@@ -31,17 +29,19 @@
     <div class="wrapperContainer">
         <header>
 
-            <label for="toggle">
+            <label tabindex="0" for="toggle">
                 <i class="fas fa-bars"></i>
+
             </label>
             <input type="checkbox" id="toggle" name="toggle">
+
             <div class="sidebar">
                 <nav>
                     <ul>
-                        <li><a href="">Home</a></li>
-                        <li><a href="">About</a></li>
-                        <li><a href="">Projects</a></li>
-                        <li><a href="">Contact</a></li>
+                        <li><a href=""><i class="fas fa-home"></i>Home</a></li>
+                        <li><a href=""><i class="far fa-user"></i>About</a></li>
+                        <li><a href=""><i class="fas fa-laptop-code"></i>Projects</a></li>
+                        <li><a href=""><i class="fas fa-envelope"></i>Contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -82,16 +82,16 @@
                 d="M50.000,-0.000 C77.614,-0.000 100.000,22.386 100.000,50.000 C100.000,77.614 77.614,100.000 50.000,100.000 C22.386,100.000 -0.000,77.614 -0.000,50.000 C-0.000,22.386 22.386,-0.000 50.000,-0.000 Z" />
             </svg>
 
-            <div class="headerContainer">
+            <div class="headerContainer" data-aos="slide-right">
                     
-                <h1>Hi! <br>I'm Hira Ahsan</h1>
-                <h3>Welcome to my site</h3>
+                <h1>hira ahsan</h1>
+                <h4>front end web developer</h4>
             </div>
             <!-- Insert nav on the side and arrow to go below -->
         </header>
         <main>
 
-            <section class="about wrapper">
+            <section class="about wrapper" data-aos="fade-in">
                 <h2>About Me</h2>
 
                 <div class="aboutSection">
@@ -106,7 +106,7 @@
                 </div>
             </section>
 
-            <section class="skills wrapper">
+            <section class="skills" data-aos="slide-left">
                 <h2>Skills</h2>
                 <!-- Insert icons below -->
                 <div class="icons">
@@ -151,6 +151,11 @@
                         <i class="devicon-github-plain colored"></i>
                         <h4>Github</h4>
                     </div>
+
+                    <div class="icon firebase">
+                        <img src="https://img.icons8.com/color/48/000000/firebase.png">
+                        <h4>Firebase</h4>
+                    </div>
                 </div>
             </section>
 
@@ -158,57 +163,57 @@
                 <h2>Projects</h2>
                 
                 <div class="mockup harryPotter">
-                    <div class="mockupImage hpMockup">
+                    <div class="mockupImage hpMockup" data-aos="slide-right">
                         <img src="./assets/hpMockup.png" alt="">
                     </div>
 
-                    <div class="projectText hpText">
+                    <div class="projectText hpText" data-aos="slide-left">
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique distinctio nemo reiciendis dicta consectetur minus nisi, blanditiis sunt porro veniam?</p>
-                        <a href="">Live Version <i class="fas fa-bolt"></i></a>
-                        <a href="">Github <i class="fab fa-github-alt"></i></a>
+                        <a href="https://hiraahsan.github.io/hiraAhsanProjectThree/">Live Version <i class="fas fa-bolt"></i></a>
+                        <a href="https://github.com/hiraahsan/hiraAhsanProjectThree">Github <i class="fab fa-github-alt"></i></a>
 
                     </div>
                 </div>
 
-                <div class="mockup notSoSocial">
-                    <div class="projectText noSoSocialText">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique distinctio nemo reiciendis dicta consectetur
-                            minus nisi, blanditiis sunt porro veniam?</p>
-                        <a href="">Live Version <i class="fas fa-bolt"></i></a>
-                        <a href="">Github <i class="fab fa-github-alt"></i></a>
-                    </div>
-
-                    <div class="mockupImage notSoSocialMockup">
+                <div class="mockup reverseSection notSoSocial">
+                    
+                    <div class="mockupImage notSoSocialMockup" data-aos="slide-left">
                         <img src="./assets/notSoSocialMockup.png" alt="">
                     </div>
-
+                    
+                    <div class="projectText noSoSocialText" data-aos="slide-right">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique distinctio nemo reiciendis dicta consectetur
+                            minus nisi, blanditiis sunt porro veniam?</p>
+                        <a href="https://not-so-social.github.io/notSoSocial/">Live Version <i class="fas fa-bolt"></i></a>
+                        <a href="https://github.com/Not-So-Social/notSoSocial">Github <i class="fab fa-github-alt"></i></a>
+                    </div>
                     
                 </div>
                 
                 <div class="mockup pomemedoro">
-                    <div class="mockupImage pomemedoroMockup">
+                    <div class="mockupImage pomemedoroMockup" data-aos="slide-right">
                         <img src="./assets/pomemedoroMockup.png" alt="">
                     </div>
-                    <div class="projectText pomemedoroText">
+                    <div class="projectText pomemedoroText" data-aos="slide-left">
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique distinctio nemo reiciendis dicta consectetur minus nisi, blanditiis sunt porro veniam?</p>
-                        <a href="">Live Version <i class="fas fa-bolt"></i></a>
-                        <a href="">Github <i class="fab fa-github-alt"></i></a>
+                        <a href="https://pairedapiproject.github.io/hiraAndHeatherProjectFour/">Live Version <i class="fas fa-bolt"></i></a>
+                        <a href="https://github.com/pairedApiProject/hiraAndHeatherProjectFour">Github <i class="fab fa-github-alt"></i></a>
                     
                     </div>
                 </div>
 
-                <div class="mockup writersBlock">
-                    <div class="projectText writersBlockText">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique distinctio nemo reiciendis dicta consectetur
-                            minus nisi, blanditiis sunt porro veniam?</p>
-                        <a href="">Live Version <i class="fas fa-bolt"></i></a>
-                        <a href="">Github <i class="fab fa-github-alt"></i></a>
-                    </div>
+                <div class="mockup reverseSection writersBlock">
                     
-                    <div class="mockupImage writersBlockMockup">
+                    <div class="mockupImage writersBlockMockup" data-aos="slide-left">
                         <img src="./assets/writersBlockMockup.png" alt="">
                     </div>
                     
+                    <div class="projectText writersBlockText" data-aos="slide-right">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique distinctio nemo reiciendis dicta consectetur
+                            minus nisi, blanditiis sunt porro veniam?</p>
+                        <a href="https://hiraahsan.github.io/hira-ahsan-project-five/">Live Version <i class="fas fa-bolt"></i></a>
+                        <a href="https://github.com/hiraahsan/hira-ahsan-project-five">Github <i class="fab fa-github-alt"></i></a>
+                    </div>
                 </div>
                 <!-- Insert projects and information below -->
             </section>
@@ -216,7 +221,12 @@
             <section class="contact">
                 <div class="contactInfo">
                     <h3>get in touch!</h3>
-                    <p>Email me <a href="">here!</a></p>
+                    <div class="social">
+                        <h4>Connect with me:</h4>
+                        <a href=""><i class="devicon-github-plain colored"></i> <p>hiraahsan</p></a>
+                        <a href=""><i class="fab fa-linkedin"></i> <p>hiraahsan</p></a>
+                        <a href=""><i class="fab fa-twitter"></i> <p>hiiracodes</p></a>
+                    </div>
                 </div>
 
                 <div class="formSection">
@@ -242,6 +252,7 @@
     </div>
 
     <script src='https://code.jquery.com/jquery-3.4.1.js'integrity='sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU='crossorigin='anonymous'></script>
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="./script.js"></script>
 </body>
 </html>
