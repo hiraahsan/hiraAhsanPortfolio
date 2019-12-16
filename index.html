@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hira Ahsan</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+<link rel="manifest" href="./assets/site.webmanifest">
     
     <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat|Playfair+Display&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Allura&display=swap" rel="stylesheet">
@@ -24,27 +28,34 @@
 
 </head>
 <body>
-    <div class="wrapper">
+    <div class="wrapperContainer">
         <header>
-            <nav>
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Projects</a></li>
-                    <li><a href="">Contact</a></li>
-                </ul>
-            </nav>
+
+            <label for="toggle">
+                <i class="fas fa-bars"></i>
+            </label>
+            <input type="checkbox" id="toggle" name="toggle">
+            <div class="sidebar">
+                <nav>
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Projects</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
 
             <svg class="circles blueCircle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="295px"
                 height="295px">
                 <path fill-rule="evenodd" opacity="0.4" fill="rgb(42, 162, 238)"
-                    d="M147.500,0.000 C228.962,0.000 295.000,66.038 295.000,147.500 C295.000,228.962 228.962,295.000 147.500,295.000 C66.038,295.000 0.000,228.962 0.000,147.500 C0.000,66.038 66.038,0.000 147.500,0.000 Z" />
+                d="M50.000,-0.000 C77.614,-0.000 100.000,22.386 100.000,50.000 C100.000,77.614 77.614,100.000 50.000,100.000 C22.386,100.000 -0.000,77.614 -0.000,50.000 C-0.000,22.386 22.386,-0.000 50.000,-0.000 Z" />
             </svg>
             
             <svg class="circles purpleCircle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200px"
                 height="200px">
                 <path fill-rule="evenodd" opacity="0.6" fill="rgb(164, 151, 244)"
-                    d="M100.000,-0.000 C155.228,-0.000 200.000,44.772 200.000,100.000 C200.000,155.228 155.228,200.000 100.000,200.000 C44.772,200.000 -0.000,155.228 -0.000,100.000 C-0.000,44.772 44.772,-0.000 100.000,-0.000 Z" />
+                d="M50.000,-0.000 C77.614,-0.000 100.000,22.386 100.000,50.000 C100.000,77.614 77.614,100.000 50.000,100.000 C22.386,100.000 -0.000,77.614 -0.000,50.000 C-0.000,22.386 22.386,-0.000 50.000,-0.000 Z" />
             </svg>
             
             <svg class="circles smallGreenCircle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -56,19 +67,19 @@
             <svg class="circles pinkCircle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="420px"
                 height="420px">
                 <path fill-rule="evenodd" opacity="0.6" fill="rgb(255, 210, 218)"
-                    d="M210.000,0.000 C325.980,0.000 420.000,94.020 420.000,210.000 C420.000,325.980 325.980,420.000 210.000,420.000 C94.020,420.000 0.000,325.980 0.000,210.000 C0.000,94.020 94.020,0.000 210.000,0.000 Z" />
+                d="M50.000,-0.000 C77.614,-0.000 100.000,22.386 100.000,50.000 C100.000,77.614 77.614,100.000 50.000,100.000 C22.386,100.000 -0.000,77.614 -0.000,50.000 C-0.000,22.386 22.386,-0.000 50.000,-0.000 Z" />
             </svg>
             
             <svg class="circles orangeCircle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="375px"
                 height="375px">
                 <path fill-rule="evenodd" opacity="0.6" fill="rgb(246, 169, 96)"
-                    d="M187.500,-0.000 C291.053,-0.000 375.000,83.947 375.000,187.500 C375.000,291.053 291.053,375.000 187.500,375.000 C83.947,375.000 -0.000,291.053 -0.000,187.500 C-0.000,83.947 83.947,-0.000 187.500,-0.000 Z" />
+                d="M50.000,-0.000 C77.614,-0.000 100.000,22.386 100.000,50.000 C100.000,77.614 77.614,100.000 50.000,100.000 C22.386,100.000 -0.000,77.614 -0.000,50.000 C-0.000,22.386 22.386,-0.000 50.000,-0.000 Z" />
             </svg>
             
             <svg class="circles bigGreenCircle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="300px"
                 height="300px">
                 <path fill-rule="evenodd" opacity="0.6" fill="rgb(97, 225, 171)"
-                    d="M150.000,-0.000 C232.843,-0.000 300.000,67.157 300.000,150.000 C300.000,232.843 232.843,300.000 150.000,300.000 C67.157,300.000 -0.000,232.843 -0.000,150.000 C-0.000,67.157 67.157,-0.000 150.000,-0.000 Z" />
+                d="M50.000,-0.000 C77.614,-0.000 100.000,22.386 100.000,50.000 C100.000,77.614 77.614,100.000 50.000,100.000 C22.386,100.000 -0.000,77.614 -0.000,50.000 C-0.000,22.386 22.386,-0.000 50.000,-0.000 Z" />
             </svg>
 
             <div class="headerContainer">
@@ -80,7 +91,7 @@
         </header>
         <main>
 
-            <section class="about">
+            <section class="about wrapper">
                 <h2>About Me</h2>
 
                 <div class="aboutSection">
@@ -95,7 +106,7 @@
                 </div>
             </section>
 
-            <section class="skills">
+            <section class="skills wrapper">
                 <h2>Skills</h2>
                 <!-- Insert icons below -->
                 <div class="icons">
@@ -143,7 +154,7 @@
                 </div>
             </section>
 
-            <section class="projects">
+            <section class="projects wrapper">
                 <h2>Projects</h2>
                 
                 <div class="mockup harryPotter">
@@ -211,7 +222,6 @@
                 <div class="formSection">
                     <p>Want to hire me? Pls contact below!</p>
                     <form action="">
-                        <label for="name">What is your name?</label>
                         <input type="text" name="name" placeholder="Daenarys Targaryen, First of Her Name, Queen of the Andals......">
                         <input type="email" name="email" id="email" placeholder="queenofdragons@westeros.com">
                         <input type="text" name="message" id="message" placeholder="Message">

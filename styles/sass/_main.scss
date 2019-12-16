@@ -19,6 +19,42 @@
     }
 }
 
+.about.wrapper {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2::after {
+        background: $primaryPink;
+    }
+}
+
+.projects.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+h2, h3 {
+    position: relative;
+    display: inline-block;
+    font-family: 'Playfair Display', serif;
+    text-transform: lowercase;;
+    &::after {
+        content: "";
+        background: $primaryPink;
+        position: absolute;
+        height: 50%;
+        width: 110%;
+        left: -5%;
+        bottom: 0;
+        opacity: 0.5;
+        z-index: -1;
+    }
+}
+
 .skills {
     text-align: center;
     padding: 5%;
@@ -163,7 +199,7 @@ from {
 }
 
 .mockupImage, .projectText {
-    width: 50%;
+    width: 45%; 
 }
 
 i {
@@ -187,12 +223,51 @@ i {
     justify-content: space-around;
 
     .contactInfo {
-        width: 40%;
+        width: 30%;
+    }
+
+    .formSection {
+        width:70%;
     }
 
     form {
         display: flex;
         flex-direction: column;
-        width: 40%;
+
+        input {
+            margin: 5px 0;
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+            background: $primaryPink;
+            &[name="message"] {
+                height: 200px;
+
+                &::placeholder {
+                    text-align: left;
+                }
+            }
+            &::placeholder {
+                color: $navyBackground;
+            }
+
+            &[type="submit"] {
+                border: 2px solid $navyBackground;
+                &:hover {
+                    background: $navyBackground;
+                    color: $primaryPink;
+                    border: 2px solid $primaryPink;
+                }
+            }
+        }
     }
+}
+
+.fas.fa-bars {
+    color: $primaryPink;
+    position: absolute;
+    font-size: 5rem;
+    top:0;
+    right:0;
+    z-index: 1;
 }

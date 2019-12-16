@@ -21,16 +21,30 @@ header {
     }
 }
 
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]:checked + .sidebar nav {
+    right: 0;
+    display: block;
+}
+
+
+
 nav {
     align-self: flex-start;
-    width: 100%;
+    width: 30%;
     background: black;
     color: white;
-    position: fixed;
+    position: absolute;
+    right: -30%;
+    display: none;
 
     ul {
         display: flex;
-        justify-content: flex-end;
+        flex-direction: column;
+        // justify-content: flex-end;
 
         li {
             padding: 10px;
@@ -41,6 +55,15 @@ nav {
         }
     }
 }
+
+.fas.fa-bars:active + nav {
+    display: block;
+
+}
+
+
+
+
 
 .headerContainer {
     background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
