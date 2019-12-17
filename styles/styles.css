@@ -215,6 +215,8 @@ img {
 
 header {
   height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.5))), url(../assets/circle3.png);
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../assets/circle3.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -229,6 +231,26 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-animation: slide 2s linear infinite;
+          animation: slide 2s linear infinite;
+}
+
+@-webkit-keyframes slide {
+  from {
+    top: 0;
+  }
+  to {
+    top: 20%;
+  }
+}
+
+@keyframes slide {
+  from {
+    top: 0;
+  }
+  to {
+    top: 20%;
+  }
 }
 
 header h1 {
@@ -257,11 +279,11 @@ input[type="checkbox"] {
 }
 
 nav {
-  background: inherit;
   color: #1f2041;
-  position: absolute;
   position: fixed;
+  width: 100%;
   right: 0;
+  background: #fab0aa;
 }
 
 nav ul {
@@ -270,14 +292,22 @@ nav ul {
   display: flex;
   -ms-flex-line-pack: center;
       align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 10vh;
 }
 
 nav ul li {
-  padding: 30px 10px;
+  padding: 15px 10px;
 }
 
 nav ul li:hover {
-  background: #fab0aa;
+  background: #1f2041;
+  color: #fab0aa;
   border-radius: 5px;
 }
 
@@ -292,12 +322,12 @@ nav ul li a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  text-shadow: 2px 2px #fab0aa;
 }
 
 .headerContainer {
-  background: #fab0aa;
-  width: 50%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.5)));
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+  color: #1f2041;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -316,12 +346,21 @@ nav ul li a {
   left: 0;
   right: 0;
   margin: 0 auto;
-  border-radius: 10px;
   padding: 10px;
 }
 
 .headerContainer h4 {
   font-family: "Playfair Display", cursive;
+}
+
+.fas.fa-bars {
+  color: #fab0aa;
+  position: absolute;
+  font-size: 5rem;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  position: fixed;
 }
 
 .aboutSection {
@@ -499,80 +538,6 @@ h3 {
   margin: 50px 0;
 }
 
-.blueCircle {
-  position: absolute;
-  -webkit-animation: circlesBottom 10s linear infinite;
-          animation: circlesBottom 10s linear infinite;
-}
-
-@-webkit-keyframes circles {
-  from {
-    top: 0;
-    left: 0;
-  }
-  to {
-    top: 20%;
-    left: 20%;
-  }
-  to {
-    top: 50%;
-    left: 50%;
-  }
-  to {
-    top: 20%;
-    left: 20%;
-  }
-}
-
-@keyframes circles {
-  from {
-    top: 0;
-    left: 0;
-  }
-  to {
-    top: 20%;
-    left: 20%;
-  }
-  to {
-    top: 50%;
-    left: 50%;
-  }
-  to {
-    top: 20%;
-    left: 20%;
-  }
-}
-
-.purpleCircle {
-  position: absolute;
-  -webkit-animation: circlesAlternate 20s linear infinite;
-          animation: circlesAlternate 20s linear infinite;
-}
-
-.smallGreenCircle {
-  position: absolute;
-  -webkit-animation: circles 10s linear infinite;
-          animation: circles 10s linear infinite;
-}
-
-.pinkCircle {
-  position: absolute;
-  -webkit-animation: circles 10s linear infinite;
-          animation: circles 10s linear infinite;
-}
-
-.orangeCircle {
-  position: absolute;
-  -webkit-animation: circles 20s linear infinite;
-          animation: circles 20s linear infinite;
-}
-
-.bigGreenCircle {
-  position: absolute;
-  -webkit-animation: circlesAlternate 12s linear infinite;
-          animation: circlesAlternate 12s linear infinite;
-}
-
 .mockup {
   width: 100%;
   display: -webkit-box;
@@ -733,12 +698,85 @@ i:hover {
   border: 2px solid #fab0aa;
 }
 
-.fas.fa-bars {
-  color: #fab0aa;
+[data-aos][data-aos][data-aos-duration="400"], body[data-aos-duration="400"] [data-aos] {
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+.blueCircle {
   position: absolute;
-  font-size: 5rem;
-  top: 0;
-  right: 0;
-  z-index: 1;
-  position: fixed;
+  -webkit-animation: circlesBottom 10s linear infinite;
+          animation: circlesBottom 10s linear infinite;
+}
+
+@-webkit-keyframes circles {
+  from {
+    top: 0;
+    left: 0;
+  }
+  to {
+    top: 20%;
+    left: 20%;
+  }
+  to {
+    top: 50%;
+    left: 50%;
+  }
+  to {
+    top: 20%;
+    left: 20%;
+  }
+}
+
+@keyframes circles {
+  from {
+    top: 0;
+    left: 0;
+  }
+  to {
+    top: 20%;
+    left: 20%;
+  }
+  to {
+    top: 50%;
+    left: 50%;
+  }
+  to {
+    top: 20%;
+    left: 20%;
+  }
+}
+
+.purpleCircle {
+  position: absolute;
+  -webkit-animation: circlesAlternate 20s linear infinite;
+          animation: circlesAlternate 20s linear infinite;
+}
+
+.smallGreenCircle {
+  position: absolute;
+  -webkit-animation: circles 10s linear infinite;
+          animation: circles 10s linear infinite;
+}
+
+.pinkCircle {
+  position: absolute;
+  -webkit-animation: circles 10s linear infinite;
+          animation: circles 10s linear infinite;
+}
+
+.orangeCircle {
+  position: absolute;
+  -webkit-animation: circles 20s linear infinite;
+          animation: circles 20s linear infinite;
+}
+
+.bigGreenCircle {
+  position: absolute;
+  -webkit-animation: circlesAlternate 12s linear infinite;
+          animation: circlesAlternate 12s linear infinite;
+}
+
+svg {
+  display: none;
 }

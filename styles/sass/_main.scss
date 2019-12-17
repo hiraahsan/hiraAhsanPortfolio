@@ -137,105 +137,7 @@ h3 {
     }
 }
 
-.blueCircle {
-    position: absolute;
-    animation: circlesBottom 10s linear infinite;
-}
 
-// @keyframes circlesBottom {
-// from {
-//         bottom: 0;
-//         left: 0;
-//     }
-
-//     to {
-//         bottom: 50%;
-//         left: 50%;
-//     }
-
-//     to {
-//         bottom: 20%;
-//         left: 20%;
-//     }
-// }
-
-@keyframes circles {
-from {
-        top: 0;
-        left: 0;
-    }
-
-    to {
-        top: 20%;
-        left: 20%;
-    }
-
-    to {
-        top: 50%;
-        left: 50%;
-    }
-
-    to {
-        top: 20%;
-        left: 20%;
-    }
-}
-
-// @keyframes circlesAlternate {
-//     from {
-//         top: 0;
-//         right: 0;
-//     }
-
-//     to {
-//         top: 25%;
-//         right: 25%;
-//     }
-
-//     to {
-//         top: 50%;
-//         right: 50%;
-//     }
-
-//     to {
-//         top: 70%;
-//         right: 70%;
-//     }
-
-//     to {
-//         top: 50%;
-//         right: 50%;
-//     }
-
-//     to {
-//         top: 20%;
-//         right: 20%;
-//     }
-// }
-
-.purpleCircle {
-    position: absolute;
-    animation: circlesAlternate 20s linear infinite;
-}
-.smallGreenCircle {
-    position: absolute;
-    animation: circles 10s linear infinite;
-}
-.pinkCircle {
-    position: absolute;
-    animation: circles 10s linear infinite;
-
-}
-.orangeCircle {
-    position:absolute;
-    animation: circles 20s linear infinite;
-
-}
-.bigGreenCircle {
-    position: absolute;
-    animation: circlesAlternate 12s linear infinite;
-
-}
 
 .mockup {
     width: 100%;
@@ -267,7 +169,6 @@ i {
     display: inline-block;
     &:hover {
         transform: scale(1.25);
-        // text-shadow: goldenrod 1px 1px;
     }
 }
 
@@ -338,13 +239,6 @@ i {
     }
 }
 
-.fas.fa-bars {
-    color: $primaryPink;
-    position: absolute;
-    font-size: 5rem;
-    top:0;
-    right:0;
-    z-index: 1;
-    position: fixed;
+[data-aos][data-aos][data-aos-duration="400"], body[data-aos-duration="400"] [data-aos] {
+    transition-duration: 1s;
 }
-
