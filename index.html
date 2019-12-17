@@ -28,70 +28,30 @@
 <body>
     <div class="wrapperContainer">
         <header>
-
-            <label tabindex="0" for="toggle">
+            <button for="toggle" class="navMenu">
                 <i class="fas fa-bars"></i>
-
-            </label>
-            <input type="checkbox" id="toggle" name="toggle">
+            </button>
 
             <div class="sidebar">
                 <nav>
                     <ul>
                         <li><a href=""><i class="fas fa-home"></i>Home</a></li>
-                        <li><a href=""><i class="far fa-user"></i>About</a></li>
-                        <li><a href=""><i class="fas fa-laptop-code"></i>Projects</a></li>
-                        <li><a href=""><i class="fas fa-envelope"></i>Contact</a></li>
+                        <li><a href="#about"><i class="far fa-user"></i>About</a></li>
+                        <li><a href="#projects"><i class="fas fa-laptop-code"></i>Projects</a></li>
+                        <li><a href="#contact"><i class="fas fa-envelope"></i>Contact</a></li>
                     </ul>
                 </nav>
             </div>
 
-            <svg class="circles blueCircle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="295px"
-                height="295px">
-                <path fill-rule="evenodd" opacity="0.4" fill="rgb(42, 162, 238)"
-                d="M50.000,-0.000 C77.614,-0.000 100.000,22.386 100.000,50.000 C100.000,77.614 77.614,100.000 50.000,100.000 C22.386,100.000 -0.000,77.614 -0.000,50.000 C-0.000,22.386 22.386,-0.000 50.000,-0.000 Z" />
-            </svg>
-            
-            <svg class="circles purpleCircle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200px"
-                height="200px">
-                <path fill-rule="evenodd" opacity="0.6" fill="rgb(164, 151, 244)"
-                d="M50.000,-0.000 C77.614,-0.000 100.000,22.386 100.000,50.000 C100.000,77.614 77.614,100.000 50.000,100.000 C22.386,100.000 -0.000,77.614 -0.000,50.000 C-0.000,22.386 22.386,-0.000 50.000,-0.000 Z" />
-            </svg>
-            
-            <svg class="circles smallGreenCircle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                width="100px" height="100px">
-                <path fill-rule="evenodd" opacity="0.4" fill="rgb(45, 223, 191)"
-                    d="M50.000,-0.000 C77.614,-0.000 100.000,22.386 100.000,50.000 C100.000,77.614 77.614,100.000 50.000,100.000 C22.386,100.000 -0.000,77.614 -0.000,50.000 C-0.000,22.386 22.386,-0.000 50.000,-0.000 Z" />
-            </svg>
-            
-            <svg class="circles pinkCircle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="420px"
-                height="420px">
-                <path fill-rule="evenodd" opacity="0.6" fill="rgb(255, 210, 218)"
-                d="M50.000,-0.000 C77.614,-0.000 100.000,22.386 100.000,50.000 C100.000,77.614 77.614,100.000 50.000,100.000 C22.386,100.000 -0.000,77.614 -0.000,50.000 C-0.000,22.386 22.386,-0.000 50.000,-0.000 Z" />
-            </svg>
-            
-            <svg class="circles orangeCircle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="375px"
-                height="375px">
-                <path fill-rule="evenodd" opacity="0.6" fill="rgb(246, 169, 96)"
-                d="M50.000,-0.000 C77.614,-0.000 100.000,22.386 100.000,50.000 C100.000,77.614 77.614,100.000 50.000,100.000 C22.386,100.000 -0.000,77.614 -0.000,50.000 C-0.000,22.386 22.386,-0.000 50.000,-0.000 Z" />
-            </svg>
-            
-            <svg class="circles bigGreenCircle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="300px"
-                height="300px">
-                <path fill-rule="evenodd" opacity="0.6" fill="rgb(97, 225, 171)"
-                d="M50.000,-0.000 C77.614,-0.000 100.000,22.386 100.000,50.000 C100.000,77.614 77.614,100.000 50.000,100.000 C22.386,100.000 -0.000,77.614 -0.000,50.000 C-0.000,22.386 22.386,-0.000 50.000,-0.000 Z" />
-            </svg>
-
             <div class="headerContainer" data-aos="slide-right">
                     
-                <h1>hira ahsan</h1>
+                <h1>Hira Ahsan</h1>
                 <h4>front end web developer</h4>
             </div>
-            <!-- Insert nav on the side and arrow to go below -->
         </header>
         <main>
 
-            <section class="about wrapper" data-aos="fade-in">
+            <section id="about" class="about wrapper" data-aos="fade-in">
                 <h2>About Me</h2>
 
                 <div class="aboutSection">
@@ -100,16 +60,17 @@
                     </div>
 
                     <div class="aboutText">
-                        <p>Hi! My name is Hira Ahsan and I'm a front-end web developer based in Toronto. I’m a former HR professional who has transitioned into web development due to a passion for web design, and creating accessible sites. I thrive working in teams and project based environments, as well as individually. 
+                        <p>Hi! My name is Hira Ahsan and I'm a front-end web developer based in Toronto. I transitioned to web development from a career in HR and client services, due to a passion for web design and creating accessible, user friendly websites. I thrive working in teams and project based environments.
                     </p>
+                    <br>
+                    <p>When I'm not coding, you can find me cooking, reading or most likely watching another episode of The Office for the 10th time.</p>
                     </div>
                 </div>
             </section>
 
-            <section class="skills" data-aos="slide-left">
+            <section id="projects" class="skills">
                 <h2>Skills</h2>
-                <!-- Insert icons below -->
-                <div class="icons">
+                <div class="icons" data-aos="slide-left">
                     <div class="icon javascript">
                         <i class="fab fa-js-square"></i>
                         <h4>JavaScript</h4>
@@ -170,8 +131,8 @@
                     <div class="projectText hpText" data-aos="slide-left">
                         <h4>Sorting Hat Quiz</h4>
                         <p>A Harry Potter quiz created with Javascript. Find out what house you're in now!</p>
-                        <a href="https://hiraahsan.github.io/hiraAhsanProjectThree/">Live Version <i class="fas fa-bolt"></i></a>
-                        <a href="https://github.com/hiraahsan/hiraAhsanProjectThree">Github <i class="fab fa-github-alt"></i></a>
+                        <a class="links" href="https://hiraahsan.github.io/hiraAhsanProjectThree/">Live Version <i class="fas fa-bolt"></i></a>
+                        <a class="links" href="https://github.com/hiraahsan/hiraAhsanProjectThree">Github <i class="fab fa-github-alt"></i></a>
 
                     </div>
                 </div>
@@ -179,14 +140,18 @@
                 <div class="mockup reverseSection notSoSocial">
                     
                     <div class="mockupImage notSoSocialMockup" data-aos="slide-left">
-                        <img src="./assets/notSoSocialMockup.png" alt="">
+                        <img src="./assets/notSoSocialMockup.png" alt="Not So Social Website Image">
                     </div>
                     
                     <div class="projectText noSoSocialText" data-aos="slide-right">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique distinctio nemo reiciendis dicta consectetur
-                            minus nisi, blanditiis sunt porro veniam?</p>
-                        <a href="https://not-so-social.github.io/notSoSocial/">Live Version <i class="fas fa-bolt"></i></a>
-                        <a href="https://github.com/Not-So-Social/notSoSocial">Github <i class="fab fa-github-alt"></i></a>
+                        <h4>Not So Social</h4>
+                        <p>Dinner dates, bachelor parties, prom nights, and game nights. These social events are fantastic, but think about the
+                        mess, expensive outings, and rowdy crowd. Hard pass. Why not fill the time with some great TV shows during these social
+                        events in the comfort of your own home with or without a crowd. Created with <a href="https://github.com/lewisbrignell">Lewis Brignell</a>,
+                        <a href="https://github.com/nickyiliwang">Nick Wang</a>,
+                        <a href="https://github.com/tifcodes">Tiffany Wong</a>.</p>
+                        <a class="links" href="https://not-so-social.github.io/notSoSocial/">Live Version <i class="fas fa-bolt"></i></a>
+                        <a class="links" href="https://github.com/Not-So-Social/notSoSocial">Github <i class="fab fa-github-alt"></i></a>
                     </div>
                     
                 </div>
@@ -196,9 +161,10 @@
                         <img src="./assets/pomemedoroMockup.png" alt="">
                     </div>
                     <div class="projectText pomemedoroText" data-aos="slide-left">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique distinctio nemo reiciendis dicta consectetur minus nisi, blanditiis sunt porro veniam?</p>
-                        <a href="https://pairedapiproject.github.io/hiraAndHeatherProjectFour/">Live Version <i class="fas fa-bolt"></i></a>
-                        <a href="https://github.com/pairedApiProject/hiraAndHeatherProjectFour">Github <i class="fab fa-github-alt"></i></a>
+                        <h4>Pomemedoro Timer</h4>
+                        <p>A Pomodoro timer with a twist. Set your work time and pass your breaks with some fun gifs! Utilizes the Giphy API. Created with <a href="">Heather Hamilton</a>.</p>
+                        <a class="links" href="https://pairedapiproject.github.io/hiraAndHeatherProjectFour/">Live Version <i class="fas fa-bolt"></i></a>
+                        <a class="links" href="https://github.com/pairedApiProject/hiraAndHeatherProjectFour">Github <i class="fab fa-github-alt"></i></a>
                     
                     </div>
                 </div>
@@ -210,10 +176,10 @@
                     </div>
                     
                     <div class="projectText writersBlockText" data-aos="slide-right">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique distinctio nemo reiciendis dicta consectetur
-                            minus nisi, blanditiis sunt porro veniam?</p>
-                        <a href="https://hiraahsan.github.io/hira-ahsan-project-five/">Live Version <i class="fas fa-bolt"></i></a>
-                        <a href="https://github.com/hiraahsan/hira-ahsan-project-five">Github <i class="fab fa-github-alt"></i></a>
+                        <h4>Writer's Block</h4>
+                        <p>Are you a writer and you've run into a bit of a writer's block? Or do you just want to create some notes and add some pictures with your text? Try out Writer's Block! Created with React, Firebase, and utilizes the Unsplash API.</p>
+                        <a class="links" href="https://hiraahsan.github.io/hira-ahsan-project-five/">Live Version <i class="fas fa-bolt"></i></a>
+                        <a class="links" href="https://github.com/hiraahsan/hira-ahsan-project-five">Github <i class="fab fa-github-alt"></i></a>
                     </div>
                 </div>
                 <!-- Insert projects and information below -->
@@ -246,7 +212,7 @@
         </main>
 
         <footer>
-            Copyright Hira Ahsan
+            Designed and Coded by Hira Ahsan
         </footer>
 
         

@@ -101,6 +101,14 @@ h3 {
         @include forPhone {
             padding: 20px;
         }
+
+        &.firebase img {
+            margin: 0 auto;
+
+            &:hover {
+                transform: scale(1.5);
+            }
+        }
         i {
             font-size: 6rem;
         }
@@ -118,7 +126,7 @@ h3 {
         margin-bottom: 20px;
     }
 
-    a {
+    .links {
         background: $navyBackground;
         border: 2px solid $primaryPink;
         padding: 7px 12px;
@@ -185,6 +193,24 @@ i {
     display: flex;
     justify-content: space-around;
 
+    h4 {
+        margin-top: 15px;
+    }
+
+    a {
+        display: inline-block;
+        width: 100%;
+        margin: 10px 0;
+
+        &:hover {
+            text-shadow: 1px 1px $primaryPink;
+        }
+        p {
+            display: inline-block;
+            margin: 0 5px;
+        }
+    }
+
     @include forPhone {
         flex-wrap:wrap;
     }
@@ -209,13 +235,26 @@ i {
     form {
         display: flex;
         flex-direction: column;
+        padding: 10px 50px;
+        justify-content: center;
+        align-items: center;
 
         input {
             margin: 5px 0;
             padding: 5px;
+            width: 370px;
             border: none;
-            border-radius: 5px;
-            background: $primaryPink;
+            border-radius: 2px;
+            background: inherit;
+            border-bottom: 2px solid white;
+
+            &:focus, &:active {
+                color: $navyBackground;
+                background: $primaryPink;
+
+                
+            }
+
             &[name="message"] {
                 height: 200px;
 
@@ -224,11 +263,12 @@ i {
                 }
             }
             &::placeholder {
-                color: $navyBackground;
+                color: white;
             }
 
             &[type="submit"] {
                 border: 2px solid $navyBackground;
+                color: white;
                 &:hover {
                     background: $navyBackground;
                     color: $primaryPink;
@@ -239,6 +279,21 @@ i {
     }
 }
 
+h4 {
+    font-weight: bold;
+}
+
 [data-aos][data-aos][data-aos-duration="400"], body[data-aos-duration="400"] [data-aos] {
     transition-duration: 1s;
+}
+
+footer {
+    background: $primaryPink;
+    color: $navyBackground;
+    padding: 5px 0;
+    text-align: center;
+}
+
+main {
+    padding-top: 75px;
 }
