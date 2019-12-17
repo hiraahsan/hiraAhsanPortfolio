@@ -46,7 +46,7 @@ input[type="checkbox"] {
     display: none;
 }
 
-// input[type="checkbox"]:checked + .sidebar nav {
+// button: + .sidebar nav {
 //     right: 0;
 //     display: block;
 //     z-index: 1;
@@ -58,9 +58,18 @@ button {
     border: none;
     right: 0;
     position: fixed;
+    background: inherit;
+    padding:0px;
     
     @include forPhone {
         display: block;
+        .fa-times {
+            display: none;
+        };
+    }
+
+    .fa-times {
+        display: none;
     }
     
 }

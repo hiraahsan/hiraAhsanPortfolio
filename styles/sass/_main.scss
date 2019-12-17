@@ -79,6 +79,13 @@ h3 {
     background-size: cover;
     background-attachment: fixed;
 
+    i {
+    display: inline-block;
+    &:hover {
+        transform: scale(1.25);
+    }
+}
+
     @include forTablet {
         background: none;
     }
@@ -100,6 +107,10 @@ h3 {
 
         @include forPhone {
             padding: 20px;
+        }
+
+        @include forSmallPhone {
+            padding: 10px;
         }
 
         &.firebase img {
@@ -132,6 +143,11 @@ h3 {
         padding: 7px 12px;
         border-radius: 25px;
         color: $primaryPink;
+
+        @include forSmallPhone {
+            display: inline-block;
+            margin: 5px 0;
+        }
 
         &:hover {
             background: $primaryPink;
@@ -173,12 +189,7 @@ h3 {
     }
 }
 
-i {
-    display: inline-block;
-    &:hover {
-        transform: scale(1.25);
-    }
-}
+
 
 .about h2 {
     text-align: center;
@@ -192,6 +203,10 @@ i {
     padding: 50px;
     display: flex;
     justify-content: space-around;
+
+    .devicon-github-plain {
+        color: white;
+    }
 
     h4 {
         margin-top: 15px;
@@ -239,6 +254,33 @@ i {
         justify-content: center;
         align-items: center;
 
+        @include forPhone {
+            padding: 0;
+        }
+
+        textarea {
+            margin: 5px 0;
+            padding: 5px;
+            width: 370px;
+            border: none;
+            border-radius: 2px;
+            background: inherit;
+            border: 2px solid white;
+
+            @include forPhone {
+                width: 100%;
+            }
+
+             &:focus, &:active {
+                color: $navyBackground;
+                background: $primaryPink;   
+            }
+
+            &::placeholder {
+                color: white;
+            }
+        }
+
         input {
             margin: 5px 0;
             padding: 5px;
@@ -248,11 +290,13 @@ i {
             background: inherit;
             border-bottom: 2px solid white;
 
+            @include forPhone {
+                width: 100%;
+            }
+
             &:focus, &:active {
                 color: $navyBackground;
-                background: $primaryPink;
-
-                
+                background: $primaryPink;   
             }
 
             &[name="message"] {
@@ -269,6 +313,7 @@ i {
             &[type="submit"] {
                 border: 2px solid $navyBackground;
                 color: white;
+                border: 2px solid white;
                 &:hover {
                     background: $navyBackground;
                     color: $primaryPink;
@@ -294,6 +339,10 @@ footer {
     text-align: center;
 }
 
-main {
+section {
     padding-top: 75px;
+
+    @include forPhone {
+        padding-top: 0;
+    }
 }

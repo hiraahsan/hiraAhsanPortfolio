@@ -34,4 +34,8 @@ img {
     @include forPhone {
         width: 95%;
     }
+
+    @include forSmallPhone {
+        width: 100%;
+    }
 }

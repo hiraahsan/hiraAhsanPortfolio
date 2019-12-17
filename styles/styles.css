@@ -219,6 +219,12 @@ img {
   }
 }
 
+@media (max-width: 450px) {
+  .wrapper {
+    width: 100%;
+  }
+}
+
 header {
   height: 100vh;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.5))), url(../assets/circle3.png);
@@ -289,12 +295,21 @@ button {
   border: none;
   right: 0;
   position: fixed;
+  background: inherit;
+  padding: 0px;
 }
 
 @media (max-width: 599px) {
   button {
     display: block;
   }
+  button .fa-times {
+    display: none;
+  }
+}
+
+button .fa-times {
+  display: none;
 }
 
 nav {
@@ -502,6 +517,15 @@ h3 {
   background-attachment: fixed;
 }
 
+.skills i {
+  display: inline-block;
+}
+
+.skills i:hover {
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
+}
+
 @media (max-width: 900px) {
   .skills {
     background: none;
@@ -539,6 +563,12 @@ h3 {
   }
 }
 
+@media (max-width: 450px) {
+  .skills .icons .icon {
+    padding: 10px;
+  }
+}
+
 .skills .icons .icon.firebase img {
   margin: 0 auto;
 }
@@ -567,6 +597,13 @@ h3 {
   padding: 7px 12px;
   border-radius: 25px;
   color: #fab0aa;
+}
+
+@media (max-width: 450px) {
+  .projects .links {
+    display: inline-block;
+    margin: 5px 0;
+  }
 }
 
 .projects .links:hover {
@@ -620,15 +657,6 @@ h3 {
   }
 }
 
-i {
-  display: inline-block;
-}
-
-i:hover {
-  -webkit-transform: scale(1.25);
-          transform: scale(1.25);
-}
-
 .about h2 {
   text-align: center;
 }
@@ -644,6 +672,10 @@ i:hover {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+.contact .devicon-github-plain {
+  color: white;
 }
 
 .contact h4 {
@@ -711,6 +743,49 @@ i:hover {
           align-items: center;
 }
 
+@media (max-width: 599px) {
+  .contact form {
+    padding: 0;
+  }
+}
+
+.contact form textarea {
+  margin: 5px 0;
+  padding: 5px;
+  width: 370px;
+  border: none;
+  border-radius: 2px;
+  background: inherit;
+  border: 2px solid white;
+}
+
+@media (max-width: 599px) {
+  .contact form textarea {
+    width: 100%;
+  }
+}
+
+.contact form textarea:focus, .contact form textarea:active {
+  color: #1f2041;
+  background: #fab0aa;
+}
+
+.contact form textarea::-webkit-input-placeholder {
+  color: white;
+}
+
+.contact form textarea:-ms-input-placeholder {
+  color: white;
+}
+
+.contact form textarea::-ms-input-placeholder {
+  color: white;
+}
+
+.contact form textarea::placeholder {
+  color: white;
+}
+
 .contact form input {
   margin: 5px 0;
   padding: 5px;
@@ -719,6 +794,12 @@ i:hover {
   border-radius: 2px;
   background: inherit;
   border-bottom: 2px solid white;
+}
+
+@media (max-width: 599px) {
+  .contact form input {
+    width: 100%;
+  }
 }
 
 .contact form input:focus, .contact form input:active {
@@ -765,6 +846,7 @@ i:hover {
 .contact form input[type="submit"] {
   border: 2px solid #1f2041;
   color: white;
+  border: 2px solid white;
 }
 
 .contact form input[type="submit"]:hover {
@@ -789,8 +871,14 @@ footer {
   text-align: center;
 }
 
-main {
+section {
   padding-top: 75px;
+}
+
+@media (max-width: 599px) {
+  section {
+    padding-top: 0;
+  }
 }
 
 .blueCircle {
