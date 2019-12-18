@@ -1,7 +1,7 @@
 .aboutSection {
     display: flex;
 
-    @include forSmallTablet {
+    @include forTablet {
         flex-wrap: wrap;
     }
 
@@ -13,7 +13,7 @@
         width: 50%;
         padding: 5%;
 
-        @include forSmallTablet {
+        @include forTablet {
             width: 100%;
         }
     }
@@ -22,7 +22,11 @@
         width: 50%;
         padding: 5%;
 
-        @include forSmallTablet {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @include forTablet {
             width: 100%;
         }
     }
@@ -36,6 +40,10 @@
     h2::after {
         background: $primaryPink;
     }
+}
+
+h3 {
+    font-size:4rem;
 }
 
 .projects.wrapper {
@@ -72,62 +80,11 @@ h3 {
     z-index: 0;
 }
 
-.skills {
-    text-align: center;
-    padding: 5%;
-    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../assets/lineBackground.png);
-    background-size: cover;
-    background-attachment: fixed;
-
-    i {
-    display: inline-block;
-    &:hover {
-        transform: scale(1.25);
-    }
-}
-
-    @include forTablet {
-        background: none;
-    }
-
-    .icons {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        align-items: center;
-        margin: 50px 0;
-
-        
-     .icon {
-        padding: 50px;
-
-        @include forTablet {
-            padding: 30px;
-        }
-
-        @include forPhone {
-            padding: 20px;
-        }
-
-        @include forSmallPhone {
-            padding: 10px;
-        }
-
-        &.firebase img {
-            margin: 0 auto;
-
-            &:hover {
-                transform: scale(1.5);
-            }
-        }
-        i {
-            font-size: 6rem;
-        }
-    }
-}
-}
-
 .projects {
+
+    h4 {
+        font-size: 3rem;
+    }
     h2 {
         text-align: center;
         margin: 40px;
@@ -153,11 +110,35 @@ h3 {
             background: $primaryPink;
             color: $navyBackground;
             border: 2px solid $navyBackground;
+
+            & > i.fa-bolt {
+                color: rgb(255, 255, 50);
+                animation: bolt 0.5s linear infinite;
+                animation-iteration-count: 5;
+            }
         }
     }
 
     .mockup {
         margin: 50px 0;
+    }
+}
+
+@keyframes bolt {
+    from {
+        transform: scale(1.8) rotate(25deg);
+    }
+
+    to {
+        transform: rotate(10deg);
+    }
+
+    to {
+        transform: rotate(15deg);
+    }
+
+    to {
+        transform: rotate(0deg);
     }
 }
 
@@ -189,16 +170,9 @@ h3 {
     }
 }
 
-
-
-.about h2 {
-    text-align: center;
-}
-
 .contact {
     background: $navyBackground;
     text-align: center;
-    height: auto;
     color: white;
     padding: 50px;
     display: flex;
@@ -209,7 +183,7 @@ h3 {
     }
 
     h4 {
-        margin-top: 15px;
+        margin: 45px 0 15px 0;
     }
 
     a {
@@ -226,14 +200,29 @@ h3 {
         }
     }
 
-    @include forPhone {
+    @include forSmallTablet {
         flex-wrap:wrap;
     }
 
     .contactInfo {
         width: 30%;
 
-        @include forPhone {
+        h3 {
+            text-align: center;
+        }
+
+        .social {
+            text-align: left;
+            padding-left: 5%;
+            font-size: 2.5rem;
+        }
+        
+
+        .social {
+            margin: 40px 0;
+        }
+
+        @include forSmallTablet {
             width: 100%;
             text-align: left;
             margin-bottom: 30px;
@@ -242,7 +231,7 @@ h3 {
 
     .formSection {
         width:70%;
-        @include forPhone {
+        @include forSmallTablet {
             width: 100%;
         }
     }
@@ -254,7 +243,7 @@ h3 {
         justify-content: center;
         align-items: center;
 
-        @include forPhone {
+        @include forSmallTablet {
             padding: 0;
         }
 
@@ -265,9 +254,10 @@ h3 {
             border: none;
             border-radius: 2px;
             background: inherit;
+            resize: none;
             border: 2px solid white;
 
-            @include forPhone {
+            @include forSmallTablet {
                 width: 100%;
             }
 
@@ -290,7 +280,7 @@ h3 {
             background: inherit;
             border-bottom: 2px solid white;
 
-            @include forPhone {
+            @include forSmallTablet {
                 width: 100%;
             }
 
@@ -340,9 +330,13 @@ footer {
 }
 
 section {
-    padding-top: 75px;
+    padding-top: 110px;
 
     @include forPhone {
         padding-top: 0;
     }
+}
+
+h2 {
+    font-size: 4rem;
 }

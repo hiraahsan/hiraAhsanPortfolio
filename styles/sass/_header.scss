@@ -53,6 +53,12 @@ input[type="checkbox"] {
 //     transition: all 1s ease;
 // }
 
+.sidebar {
+    @include forPhone {
+        display: none;
+    }
+}
+
 button {
     display: none;
     border: none;
@@ -60,9 +66,14 @@ button {
     position: fixed;
     background: inherit;
     padding:0px;
+            transition: all 1s ease;
+
     
     @include forPhone {
         display: block;
+
+        z-index: 1001;
+
         .fa-times {
             display: none;
         };
@@ -77,7 +88,6 @@ button {
 
 nav {
     color: $navyBackground;
-    // position: absolute;
     position: fixed;
     width: 100%;
     right: 0;
@@ -85,39 +95,44 @@ nav {
     z-index: 1000;
 
     @include forPhone {
-        display: none;
+        // z-index:0;
+        background: linear-gradient(rgba(250, 176, 170, 0.9), rgba(250, 176, 170, 0.9));
     }
+
+    
 
     ul {
         display: flex;
         align-content: center;
         align-items: center;
         justify-content: center;
-        height: 10vh;
+        height: 100px;
+
+        @include forPhone {
+            height: 100vh;
+            flex-direction: column;
+        }
 
         li {
-            padding: 15px 10px;
-
-            &:hover {
-                background: $navyBackground;
-                color: $primaryPink;  
-                border-radius: 5px; 
-            }
+            
 
             a {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                padding: 28px;
+
+                &:hover, &:focus, &:active {
+                background: $navyBackground;
+                color: $primaryPink;  
+                border-radius: 5px; 
+            }
             }
         }
     }
 }
 
 .headerContainer {
-    // background: linear-gradient(rgba(118, 116, 116, 0.5), rgba(155, 155, 155, 0.5));
-    // background: $navyBackground;
-    background: linear-gradient(rgba(255,255, 255, 0.5), rgba(255,255,255,0.5));
-    // width: 50%;
     color: $navyBackground;
     align-items: center;
     display: flex;
@@ -129,11 +144,11 @@ nav {
     left:0;
     right:0;
     margin: 0 auto;
-    // border-radius: 10px;
     padding: 10px;
 
     h4 {
         font-family: "Playfair Display", cursive;
+        font-size: 3.3rem;
     }
 }
 

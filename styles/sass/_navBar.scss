@@ -1,0 +1,17 @@
+.open {
+    .fa-times {
+        display: block;
+        z-index: 1001;
+        color: $primaryPink;
+        font-size: 5rem;
+        background: inherit;
+    }
+
+    .fa-bars {
+        display: none;
+    }
+
+    &.sidebar {
+        display: block;
+    }
+}
