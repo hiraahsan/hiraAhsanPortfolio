@@ -1,10 +1,11 @@
 .open {
+    transition: all 1s ease;
     .fa-times {
         display: block;
         z-index: 1001;
-        color: $primaryPink;
+        color: $navyBackground;
         font-size: 5rem;
-        background: inherit;
+        background: linear-gradient(rgba(250, 176, 170, 0.9), rgba(250, 176, 170, 0.9));
     }
 
     .fa-bars {
@@ -13,5 +14,7 @@
 
     &.sidebar {
         display: block;
+            transition: 1s ease;
+
     }
 }

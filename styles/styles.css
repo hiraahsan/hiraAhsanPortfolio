@@ -300,12 +300,16 @@ input[type="checkbox"] {
 button {
   display: none;
   border: none;
-  right: 0;
+  right: 5px;
+  top: 5px;
   position: fixed;
   background: inherit;
   padding: 0px;
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
+}
+
+button i {
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
 }
 
 @media (max-width: 599px) {
@@ -375,6 +379,8 @@ nav ul li a {
       -ms-flex-align: center;
           align-items: center;
   padding: 28px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 nav ul li a:hover, nav ul li a:focus, nav ul li a:active {
@@ -415,8 +421,8 @@ nav ul li a:hover, nav ul li a:focus, nav ul li a:active {
   color: #fab0aa;
   position: absolute;
   font-size: 5rem;
-  top: 0;
-  right: 0;
+  top: 5px;
+  right: 5px;
   z-index: 1;
   position: fixed;
 }
@@ -549,7 +555,7 @@ h3 {
 }
 
 .projects p {
-  margin-bottom: 20px;
+  margin: 30px 0;
 }
 
 .projects .links {
@@ -558,6 +564,8 @@ h3 {
   padding: 7px 12px;
   border-radius: 25px;
   color: #fab0aa;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 @media (max-width: 450px) {
@@ -567,18 +575,20 @@ h3 {
   }
 }
 
-.projects .links:hover {
+.projects .links:hover, .projects .links:focus, .projects .links:active {
   background: #fab0aa;
   color: #1f2041;
   border: 2px solid #1f2041;
 }
 
-.projects .links:hover > i.fa-bolt {
+.projects .links:hover > i.fa-bolt, .projects .links:focus > i.fa-bolt, .projects .links:active > i.fa-bolt {
   color: #ffff32;
   -webkit-animation: bolt 0.5s linear infinite;
           animation: bolt 0.5s linear infinite;
   -webkit-animation-iteration-count: 5;
           animation-iteration-count: 5;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 .projects .mockup {
@@ -707,7 +717,7 @@ h3 {
 }
 
 .contact .contactInfo {
-  width: 30%;
+  width: 50%;
 }
 
 .contact .contactInfo h3 {
@@ -733,7 +743,7 @@ h3 {
 }
 
 .contact .formSection {
-  width: 70%;
+  width: 50%;
 }
 
 @media (max-width: 750px) {
@@ -785,6 +795,8 @@ h3 {
 .contact form textarea:focus, .contact form textarea:active {
   color: #1f2041;
   background: #fab0aa;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
 .contact form textarea::-webkit-input-placeholder {
@@ -811,6 +823,8 @@ h3 {
   border-radius: 2px;
   background: inherit;
   border-bottom: 2px solid white;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 @media (max-width: 750px) {
@@ -1052,12 +1066,18 @@ svg {
   color: #5bdcfb;
 }
 
+.open {
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
 .open .fa-times {
   display: block;
   z-index: 1001;
-  color: #fab0aa;
+  color: #1f2041;
   font-size: 5rem;
-  background: inherit;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(250, 176, 170, 0.9)), to(rgba(250, 176, 170, 0.9)));
+  background: linear-gradient(rgba(250, 176, 170, 0.9), rgba(250, 176, 170, 0.9));
 }
 
 .open .fa-bars {
@@ -1066,4 +1086,6 @@ svg {
 
 .open.sidebar {
   display: block;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
 }

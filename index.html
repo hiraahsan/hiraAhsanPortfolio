@@ -28,12 +28,12 @@
 <body>
     <div class="wrapperContainer">
         <header>
-            <button for="toggle" class="navMenu">
+            <button for="toggle" class="navMenu" aria-label="click for navigation menu">
                 <i class="fas fa-bars"></i>
                 <i class="fas fa-times"></i>
             </button>
 
-            <div class="sidebar">
+            <div class="sidebar" data-aos="fade-in zoom-in">
                 <nav>
                     <ul>
                         <li><a href="#"><i class="fas fa-home"></i>Home</a></li>
@@ -200,10 +200,10 @@
 
                 <div class="formSection">
                     <h3>contact</h3>
-                    <form action="">
+                    <form action="http://www.focuspocus.io/magic/50135f36d3559e57469ecdd8444f145b" method="POST" enctype="multipart/form-data">
                         <input type="text" name="name" placeholder="Name">
                         <input type="email" name="email" id="email" placeholder="Email">
-                        <textarea name="" id="" cols="35" rows="10" placeholder="Message"></textarea>
+                        <textarea type="message" id="message" name="Message" cols="35" rows="10" placeholder="Message"></textarea>
                         <input type="submit" value="Submit">
                     </form>
                 </div>
