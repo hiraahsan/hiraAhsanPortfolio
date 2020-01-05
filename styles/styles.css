@@ -226,6 +226,11 @@ img {
   }
 }
 
+.wrapperContainer {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
 header {
   height: 100vh;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.5))), url(../assets/circle3.png);
@@ -779,6 +784,7 @@ h3 {
   margin: 5px 0;
   padding: 5px;
   width: 370px;
+  color: white;
   border: none;
   border-radius: 2px;
   background: inherit;
@@ -819,6 +825,7 @@ h3 {
   margin: 5px 0;
   padding: 5px;
   width: 370px;
+  color: white;
   border: none;
   border-radius: 2px;
   background: inherit;
