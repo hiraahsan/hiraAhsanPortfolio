@@ -1,0 +1,58 @@
+.skills {
+    text-align: center;
+    background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(../assets/lineBackground.png);
+    background-size: cover;
+    background-attachment: fixed;
+    // background-position: center;
+    background-repeat: no-repeat;
+
+
+    i {
+    display: inline-block;
+    }
+
+    @include forTablet {
+        background: none;
+    }
+
+    .icons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-top: 50px;
+
+        
+        .icon {
+            padding: 50px;
+
+            @include forTablet {
+                padding: 30px;
+            }
+
+            @include forPhone {
+                padding: 20px;
+            }
+
+            @include forSmallPhone {
+                padding: 10px;
+            }
+
+            &.firebase img {
+                margin: 0 auto;
+            }
+
+            i {
+                font-size: 6rem;
+            }
+        }
+    }
+}
+
+.javascript i {
+    color: rgb(255, 202, 40);
+}
+
+.react i {
+    color: rgb(91, 220, 251);
+}

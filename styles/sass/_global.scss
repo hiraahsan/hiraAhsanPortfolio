@@ -14,6 +14,7 @@ a {
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -29,5 +30,18 @@ img {
 .wrapper {
     max-width: 1500px;
     width: 85%;
+    margin: 0 auto;
+
+    @include forPhone {
+        width: 95%;
+    }
+
+    @include forSmallPhone {
+        width: 100%;
+    }
+}
+
+.wrapperContainer {
+    max-width: 1600px;
     margin: 0 auto;
 }

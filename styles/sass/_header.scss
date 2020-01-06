@@ -24,7 +24,7 @@ header {
     h1 {
         text-align: center;
         font-size: 8rem;
-        font-family: 'Allura', serif;
+        font-family: 'Montserrat', cursive;
 
         @include forPhone {
             font-size: 6rem;
@@ -46,52 +46,98 @@ input[type="checkbox"] {
     display: none;
 }
 
-// input[type="checkbox"]:checked + .sidebar nav {
+// button: + .sidebar nav {
 //     right: 0;
 //     display: block;
 //     z-index: 1;
 //     transition: all 1s ease;
 // }
 
+.sidebar {
+    @include forPhone {
+        display: none;
+    }
+}
+
+button {
+    display: none;
+    border: none;
+    right: 5px;
+    top: 5px;
+    position: fixed;
+    background: inherit;
+    padding:0px;
+
+    i {
+        transition: 1s ease;
+    }
+
+    
+    @include forPhone {
+        display: block;
+
+        z-index: 1001;
+
+        .fa-times {
+            display: none;
+        };
+    }
+
+    .fa-times {
+        display: none;
+    }
+    
+}
+
 
 nav {
     color: $navyBackground;
-    // position: absolute;
     position: fixed;
     width: 100%;
     right: 0;
     background: $primaryPink;
+    z-index: 1000;
+
+    @include forPhone {
+        // z-index:0;
+        background: linear-gradient(rgba(250, 176, 170, 0.9), rgba(250, 176, 170, 0.9));
+    }
+
+    
 
     ul {
         display: flex;
         align-content: center;
         align-items: center;
         justify-content: center;
-        height: 10vh;
+        height: 100px;
+
+        @include forPhone {
+            height: 100vh;
+            flex-direction: column;
+        }
 
         li {
-            padding: 15px 10px;
-
-            &:hover {
-                background: $navyBackground;
-                color: $primaryPink;  
-                border-radius: 5px; 
-            }
+            
 
             a {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                padding: 28px;
+                transition: all 0.5s ease-in-out;
+
+                &:hover, &:focus, &:active {
+                background: $navyBackground;
+                color: $primaryPink;  
+                border-radius: 5px; 
+            }
             }
         }
     }
 }
 
 .headerContainer {
-    // background: linear-gradient(rgba(118, 116, 116, 0.5), rgba(155, 155, 155, 0.5));
-    // background: $navyBackground;
-    background: linear-gradient(rgba(255,255, 255, 0.5), rgba(255,255,255,0.5));
-    // width: 50%;
     color: $navyBackground;
     align-items: center;
     display: flex;
@@ -103,11 +149,11 @@ nav {
     left:0;
     right:0;
     margin: 0 auto;
-    // border-radius: 10px;
     padding: 10px;
 
     h4 {
         font-family: "Playfair Display", cursive;
+        font-size: 3.3rem;
     }
 }
 
@@ -115,8 +161,11 @@ nav {
     color: $primaryPink;
     position: absolute;
     font-size: 5rem;
-    top:0;
-    right:0;
+    top:5px;
+    right:5px;
     z-index: 1;
     position: fixed;
+    @include forPhone {
+        display: block;
+    }
 }
