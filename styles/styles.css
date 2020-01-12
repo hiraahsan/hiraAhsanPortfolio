@@ -246,39 +246,12 @@ header {
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-animation: slide 2s linear infinite;
-          animation: slide 2s linear infinite;
-}
-
-@-webkit-keyframes slide {
-  from {
-    top: 0;
-  }
-  to {
-    top: 20%;
-  }
-}
-
-@keyframes slide {
-  from {
-    top: 0;
-  }
-  to {
-    top: 20%;
-  }
 }
 
 header h1 {
   text-align: center;
   font-size: 8rem;
-<<<<<<< HEAD
-  font-family: 'Allura', serif;
-=======
   font-family: 'Montserrat', cursive;
->>>>>>> 1626332de09b781c4de5d18f916c95db3cd6d503
 }
 
 @media (max-width: 599px) {
@@ -339,9 +312,16 @@ nav {
   color: #1f2041;
   position: fixed;
   width: 100%;
-  right: 0;
   background: #fab0aa;
   z-index: 1000;
+  margin: 0 auto;
+  max-width: 1600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media (max-width: 599px) {

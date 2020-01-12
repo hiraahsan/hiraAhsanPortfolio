@@ -7,19 +7,6 @@ header {
     display: flex;
     flex-direction: column;
     position: relative;
-    align-items: center;
-    animation: slide 2s linear infinite;
-
-    @keyframes slide {
-        from{
-            top: 0;
-        }
-
-        to {
-            top: 20%;
-        }
-        
-    }
 
     h1 {
         text-align: center;
@@ -45,13 +32,6 @@ header {
 input[type="checkbox"] {
     display: none;
 }
-
-// button: + .sidebar nav {
-//     right: 0;
-//     display: block;
-//     z-index: 1;
-//     transition: all 1s ease;
-// }
 
 .sidebar {
     @include forPhone {
@@ -94,12 +74,14 @@ nav {
     color: $navyBackground;
     position: fixed;
     width: 100%;
-    right: 0;
     background: $primaryPink;
     z-index: 1000;
+    margin: 0 auto;
+    max-width: 1600px;
+    display: flex;
+    justify-content: center;
 
     @include forPhone {
-        // z-index:0;
         background: linear-gradient(rgba(250, 176, 170, 0.9), rgba(250, 176, 170, 0.9));
     }
 
