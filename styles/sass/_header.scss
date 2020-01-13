@@ -1,6 +1,8 @@
 header {
     height:100vh;
-    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../assets/circle3.png);
+    // background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../assets/circle3.png);
+    // background: $navyBackground;
+    // z-index: -1;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -26,7 +28,16 @@ header {
 
 .fas.fa-bars {
     z-index: 2;
-    display: none;
+    display: block;
+    color: $navyBackground;
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $primaryPink;
+    border: 5px solid $primaryPink;
 }
 
 input[type="checkbox"] {
@@ -40,11 +51,8 @@ input[type="checkbox"] {
 }
 
 button {
-    display: none;
+    display: block;
     border: none;
-    right: 5px;
-    top: 5px;
-    position: fixed;
     background: inherit;
     padding:0px;
 
@@ -71,19 +79,23 @@ button {
 
 
 nav {
+    // background: $navyBackground;
+    // background: linear-gradient(rgba(255, 255, 255, 0.5) rgba(255, 255, 255, 0.5));
+    // color: $navyBackground;
     color: $navyBackground;
+    z-index: 100;
     position: fixed;
     width: 100%;
-    background: $primaryPink;
-    z-index: 1000;
+    // background: $primaryPink;
+    // z-index: 1000;  
     margin: 0 auto;
     max-width: 1600px;
     display: flex;
     justify-content: center;
 
-    @include forPhone {
+    // @include forPhone {
         background: linear-gradient(rgba(250, 176, 170, 0.9), rgba(250, 176, 170, 0.9));
-    }
+    // }
 
     
 
@@ -92,12 +104,12 @@ nav {
         align-content: center;
         align-items: center;
         justify-content: center;
-        height: 100px;
+        // height: 100px;
 
-        @include forPhone {
+        // @include forPhone {
             height: 100vh;
             flex-direction: column;
-        }
+        // }
 
         li {
             
@@ -107,7 +119,21 @@ nav {
                 flex-direction: column;
                 align-items: center;
                 padding: 28px;
+                cursor: pointer;
+                position: relative;
                 transition: all 0.5s ease-in-out;
+
+                // &::after {
+                //     content: "";
+                //     background: $primaryPink;
+                //     position: absolute;
+                //     height: 80%;
+                //     width: 90%;
+                //     // left: -5%;
+                //     bottom: 15%;
+                //     opacity: 0.5;
+                //     z-index: -1;
+                // }
 
                 &:hover, &:focus, &:active {
                 background: $navyBackground;
@@ -120,7 +146,8 @@ nav {
 }
 
 .headerContainer {
-    color: $navyBackground;
+    // color: $navyBackground;
+    color:white;
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -140,11 +167,11 @@ nav {
 }
 
 .fas.fa-bars {
-    color: $primaryPink;
+    color: $navyBackground;
     position: absolute;
     font-size: 5rem;
-    top:5px;
-    right:5px;
+    top:30px;
+    right:30px;
     z-index: 1;
     position: fixed;
     @include forPhone {

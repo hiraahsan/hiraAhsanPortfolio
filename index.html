@@ -28,16 +28,20 @@
 <body>
     <div class="wrapperContainer">
         <header>
-            <button for="toggle" class="navMenu" aria-label="click for navigation menu">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-times"></i>
-            </button>
 
-            <div class="sidebar" data-aos="fade-in zoom-in">
-                <nav>
+            <div class="buttonContainer">
+                <button for="toggle" class="navMenu" aria-label="click for navigation menu">
+                    <i class="fas fa-bars"></i>
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div class="sidebar">
+                <nav class="visuallyHidden">
                     <ul>
                         <li><a href="#"><i class="fas fa-home"></i>Home</a></li>
                         <li><a href="#about"><i class="far fa-user"></i>About</a></li>
+                        <li><a href="#skills"><i class="fas fa-code-branch"></i>Skills</a></li>
                         <li><a href="#projects"><i class="fas fa-laptop-code"></i>Projects</a></li>
                         <li><a href="#contact"><i class="fas fa-envelope"></i>Contact</a></li>
                     </ul>
@@ -49,7 +53,11 @@
                 <h1>Hira Ahsan</h1>
                 <h4>front end web developer</h4>
             </div>
+            <div id="particles-js">        </div>
+
+
         </header>
+
         <main>
 
             <section id="about" class="about wrapper" data-aos="fade-in">
@@ -69,7 +77,7 @@
                 </div>
             </section>
 
-            <section class="skills">
+            <section id="skills" class="skills">
                 <h2>Skills</h2>
                 <div class="icons" data-aos="slide-left">
                     <div class="icon javascript">
@@ -126,11 +134,11 @@
                 <h2>Projects</h2>
                 
                 <div class="mockup harryPotter">
-                    <div class="mockupImage hpMockup" data-aos="slide-right">
+                    <div class="mockupImage hpMockup" data-aos="fade-right">
                         <img src="./assets/hpMockup.png" alt="">
                     </div>
 
-                    <div class="projectText hpText" data-aos="slide-left">
+                    <div class="projectText hpText" data-aos="fade-left">
                         <h4>Sorting Hat Quiz</h4>
                         <p>A Harry Potter quiz created with Javascript. Find out what house you're in now!</p>
                         <a class="links" href="https://hiraahsan.github.io/hiraAhsanProjectThree/">Live Version <i class="fas fa-bolt"></i></a>
@@ -141,11 +149,11 @@
 
                 <div class="mockup reverseSection notSoSocial">
                     
-                    <div class="mockupImage notSoSocialMockup" data-aos="slide-left">
+                    <div class="mockupImage notSoSocialMockup" data-aos="fade-left">
                         <img src="./assets/notSoSocialMockup.png" alt="Not So Social Website Image">
                     </div>
                     
-                    <div class="projectText noSoSocialText" data-aos="slide-right">
+                    <div class="projectText noSoSocialText" data-aos="fade-right">
                         <h4>Not So Social</h4>
                         <p>Dinner dates, bachelor parties, prom nights, and game nights. These social events are fantastic, but think about the
                         mess, expensive outings, and rowdy crowd. Hard pass. Why not fill the time with some great TV shows during these social
@@ -159,10 +167,10 @@
                 </div>
                 
                 <div class="mockup pomemedoro">
-                    <div class="mockupImage pomemedoroMockup" data-aos="slide-right">
+                    <div class="mockupImage pomemedoroMockup" data-aos="fade-right">
                         <img src="./assets/pomemedoroMockup.png" alt="">
                     </div>
-                    <div class="projectText pomemedoroText" data-aos="slide-left">
+                    <div class="projectText pomemedoroText" data-aos="fade-left">
                         <h4>Pomemedoro Timer</h4>
                         <p>A Pomodoro timer with a twist. Set your work time and pass your breaks with some fun gifs! Utilizes the Giphy API. Created with <a href="">Heather Hamilton</a>.</p>
                         <a class="links" href="https://pairedapiproject.github.io/hiraAndHeatherProjectFour/">Live Version <i class="fas fa-bolt"></i></a>
@@ -173,11 +181,11 @@
 
                 <div class="mockup reverseSection writersBlock">
                     
-                    <div class="mockupImage writersBlockMockup" data-aos="slide-left">
+                    <div class="mockupImage writersBlockMockup" data-aos="fade-left">
                         <img src="./assets/writersBlockMockup.png" alt="">
                     </div>
                     
-                    <div class="projectText writersBlockText" data-aos="slide-right">
+                    <div class="projectText writersBlockText" data-aos="fade-right">
                         <h4>Writer's Block</h4>
                         <p>Are you a writer and you've run into a bit of a writer's block? Or do you just want to create some notes and add some pictures with your text? Try out Writer's Block! Created with React, Firebase, and utilizes the Unsplash API.</p>
                         <a class="links" href="https://hiraahsan.github.io/hira-ahsan-project-five/">Live Version <i class="fas fa-bolt"></i></a>
@@ -220,6 +228,10 @@
 
     <script src='https://code.jquery.com/jquery-3.4.1.js'integrity='sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU='crossorigin='anonymous'></script>
       <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <!-- particles.js lib - https://github.com/VincentGarreau/particles.js --> 
+      <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
+      <!-- stats.js lib --> 
+      <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
     <script src="./script.js"></script>
 </body>
 </html>
