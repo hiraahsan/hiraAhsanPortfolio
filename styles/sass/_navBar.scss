@@ -9,6 +9,20 @@
         // background: linear-gradient(rgba(250, 176, 170, 0.9), rgba(250, 176, 170, 0.9));
     }
 
+    .bar1 {
+        transform: rotate(-45deg) translate(-9px, 7px);
+        background-color: $navyBackground;
+    }
+
+    .bar3 {
+        transform: rotate(45deg) translate(-8px, -7px);
+        background-color:$navyBackground;
+    }
+
+    .bar2 {
+        opacity: 0;
+    }
+
     .fa-bars {
         display: none;
     }
@@ -16,6 +30,10 @@
     &.sidebar {
         display: block;
         transition: 1s ease;
+
+        nav {
+            transition: all 1s ease-in;
+        }
 
     }
 }
@@ -30,6 +48,15 @@
 
     button {
         position: relative;
+
+        div {
+            width: 35px;
+            height: 5px;
+            background-color: $primaryPink;
+            margin: 6px 0;
+            border-radius: 2px;
+            transition: 1s ease;
+        }
 
     }
 }

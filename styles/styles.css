@@ -1124,6 +1124,22 @@ svg {
   font-size: 5rem;
 }
 
+.open .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 7px);
+          transform: rotate(-45deg) translate(-9px, 7px);
+  background-color: #1f2041;
+}
+
+.open .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -7px);
+          transform: rotate(45deg) translate(-8px, -7px);
+  background-color: #1f2041;
+}
+
+.open .bar2 {
+  opacity: 0;
+}
+
 .open .fa-bars {
   display: none;
 }
@@ -1132,6 +1148,11 @@ svg {
   display: block;
   -webkit-transition: 1s ease;
   transition: 1s ease;
+}
+
+.open.sidebar nav {
+  -webkit-transition: all 1s ease-in;
+  transition: all 1s ease-in;
 }
 
 .buttonContainer {
@@ -1145,4 +1166,14 @@ svg {
 
 .buttonContainer button {
   position: relative;
+}
+
+.buttonContainer button div {
+  width: 35px;
+  height: 5px;
+  background-color: #fab0aa;
+  margin: 6px 0;
+  border-radius: 2px;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
 }
