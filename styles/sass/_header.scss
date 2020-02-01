@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Croissant+One&display=swap');
+
 header {
     height:100vh;
     // background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../assets/circle3.png);
@@ -9,11 +11,23 @@ header {
     display: flex;
     flex-direction: column;
     position: relative;
+    background: $navyBackground;
+    // background-image: linear-gradient($navyBackground, $primaryPink);
+
+    svg {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 10vw;
+ 
+    }
 
     h1 {
         text-align: center;
         font-size: 8rem;
-        font-family: 'Montserrat', cursive;
+        font-family: 'Croissant One', cursive;
+        text-transform: uppercase;
+        word-spacing: 15px;
 
         @include forPhone {
             font-size: 6rem;
@@ -24,6 +38,8 @@ header {
         text-align: center;
         
     }
+
+
 }
 
 .fas.fa-bars {
@@ -161,8 +177,9 @@ nav {
     padding: 10px;
 
     h4 {
-        font-family: "Playfair Display", cursive;
+        font-family: 'Croissant One', cursive;
         font-size: 3.3rem;
+        text-transform: capitalize;
         text-align: center;
     }
 }

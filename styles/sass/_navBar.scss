@@ -29,10 +29,12 @@
 
     &.sidebar {
         display: block;
+        // height: 100%;
         transition: 1s ease;
 
         nav {
-            transition: all 1s ease-in;
+            height: 100%;
+            transition: height 1s ease-in;
         }
 
     }
@@ -48,6 +50,8 @@
 
     button {
         position: relative;
+        background-color: $primaryPink;
+        border-radius: 5px;
 
         div {
             width: 35px;

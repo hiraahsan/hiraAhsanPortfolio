@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Croissant+One&display=swap");
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
   display: block;
 }
@@ -298,12 +299,22 @@ header {
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
+  background: #1f2041;
+}
+
+header svg {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 10vw;
 }
 
 header h1 {
   text-align: center;
   font-size: 8rem;
-  font-family: 'Montserrat', cursive;
+  font-family: 'Croissant One', cursive;
+  text-transform: uppercase;
+  word-spacing: 15px;
 }
 
 @media (max-width: 599px) {
@@ -456,8 +467,9 @@ nav ul li a:hover, nav ul li a:focus, nav ul li a:active {
 }
 
 .headerContainer h4 {
-  font-family: "Playfair Display", cursive;
+  font-family: 'Croissant One', cursive;
   font-size: 3.3rem;
+  text-transform: capitalize;
   text-align: center;
 }
 
@@ -1030,10 +1042,6 @@ h2 {
           animation: circlesAlternate 12s linear infinite;
 }
 
-svg {
-  display: none;
-}
-
 .skills {
   text-align: center;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.4)), to(rgba(255, 255, 255, 0.4))), url(../assets/lineBackground.png);
@@ -1146,8 +1154,9 @@ svg {
 }
 
 .open.sidebar nav {
-  -webkit-transition: all 1s ease-in;
-  transition: all 1s ease-in;
+  height: 100%;
+  -webkit-transition: height 1s ease-in;
+  transition: height 1s ease-in;
 }
 
 .buttonContainer {
@@ -1161,6 +1170,8 @@ svg {
 
 .buttonContainer button {
   position: relative;
+  background-color: #fab0aa;
+  border-radius: 5px;
 }
 
 .buttonContainer button div {
