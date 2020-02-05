@@ -354,6 +354,9 @@ input[type="checkbox"] {
 @media (max-width: 599px) {
   .sidebar {
     display: none;
+    height: 0;
+    -webkit-transition: height 1s ease;
+    transition: height 1s ease;
   }
 }
 
@@ -388,6 +391,9 @@ nav {
   z-index: 100;
   position: fixed;
   width: 100%;
+  height: 0;
+  -webkit-transition: height 1s ease-in-out, visibility 1s ease-in-out;
+  transition: height 1s ease-in-out, visibility 1s ease-in-out;
   margin: 0 auto;
   max-width: 1600px;
   display: -webkit-box;
@@ -423,24 +429,43 @@ nav ul li a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   padding: 28px;
   cursor: pointer;
   position: relative;
+  font-size: 3.3rem;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
 
+nav ul li a i {
+  margin-right: 15px;
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  left: 10%;
+  opacity: 0;
+  width: 0;
+  height: 3px;
+  z-index: 1;
+  -webkit-transition: width 0.3s;
+  transition: width 0.3s;
+  background-color: #1f2041;
+}
+
 nav ul li a:hover, nav ul li a:focus, nav ul li a:active {
-  background: #1f2041;
-  color: #fab0aa;
+  background-color: rgba(255, 255, 255, 0.3);
   border-radius: 5px;
+}
+
+nav ul li a:hover::after, nav ul li a:focus::after, nav ul li a:active::after {
+  opacity: 1;
+  width: 80%;
 }
 
 .headerContainer {
@@ -968,80 +993,6 @@ h2 {
   font-size: 4rem;
 }
 
-.blueCircle {
-  position: absolute;
-  -webkit-animation: circlesBottom 10s linear infinite;
-          animation: circlesBottom 10s linear infinite;
-}
-
-@-webkit-keyframes circles {
-  from {
-    top: 0;
-    left: 0;
-  }
-  to {
-    top: 20%;
-    left: 20%;
-  }
-  to {
-    top: 50%;
-    left: 50%;
-  }
-  to {
-    top: 20%;
-    left: 20%;
-  }
-}
-
-@keyframes circles {
-  from {
-    top: 0;
-    left: 0;
-  }
-  to {
-    top: 20%;
-    left: 20%;
-  }
-  to {
-    top: 50%;
-    left: 50%;
-  }
-  to {
-    top: 20%;
-    left: 20%;
-  }
-}
-
-.purpleCircle {
-  position: absolute;
-  -webkit-animation: circlesAlternate 20s linear infinite;
-          animation: circlesAlternate 20s linear infinite;
-}
-
-.smallGreenCircle {
-  position: absolute;
-  -webkit-animation: circles 10s linear infinite;
-          animation: circles 10s linear infinite;
-}
-
-.pinkCircle {
-  position: absolute;
-  -webkit-animation: circles 10s linear infinite;
-          animation: circles 10s linear infinite;
-}
-
-.orangeCircle {
-  position: absolute;
-  -webkit-animation: circles 20s linear infinite;
-          animation: circles 20s linear infinite;
-}
-
-.bigGreenCircle {
-  position: absolute;
-  -webkit-animation: circlesAlternate 12s linear infinite;
-          animation: circlesAlternate 12s linear infinite;
-}
-
 .skills {
   text-align: center;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.4)), to(rgba(255, 255, 255, 0.4))), url(../assets/lineBackground.png);
@@ -1130,13 +1081,13 @@ h2 {
 .open .bar1 {
   -webkit-transform: rotate(-45deg) translate(-9px, 7px);
           transform: rotate(-45deg) translate(-9px, 7px);
-  background-color: #1f2041;
+  background-color: #fab0aa;
 }
 
 .open .bar3 {
   -webkit-transform: rotate(45deg) translate(-8px, -7px);
           transform: rotate(45deg) translate(-8px, -7px);
-  background-color: #1f2041;
+  background-color: #fab0aa;
 }
 
 .open .bar2 {
@@ -1155,8 +1106,8 @@ h2 {
 
 .open.sidebar nav {
   height: 100%;
-  -webkit-transition: height 1s ease-in;
-  transition: height 1s ease-in;
+  -webkit-transition: height 1s ease-in-out;
+  transition: height 1s ease-in-out;
 }
 
 .buttonContainer {
@@ -1171,13 +1122,18 @@ h2 {
 .buttonContainer button {
   position: relative;
   background-color: #fab0aa;
-  border-radius: 5px;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.buttonContainer button.open {
+  background-color: #1f2041;
 }
 
 .buttonContainer button div {
   width: 35px;
   height: 5px;
-  background-color: #fab0aa;
+  background-color: #1f2041;
   margin: 6px 0;
   border-radius: 2px;
   -webkit-transition: 1s ease;

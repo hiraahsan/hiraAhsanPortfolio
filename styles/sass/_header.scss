@@ -2,9 +2,6 @@
 
 header {
     height:100vh;
-    // background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../assets/circle3.png);
-    // background: $navyBackground;
-    // z-index: -1;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -12,7 +9,6 @@ header {
     flex-direction: column;
     position: relative;
     background: $navyBackground;
-    // background-image: linear-gradient($navyBackground, $primaryPink);
 
     svg {
         position: absolute;
@@ -63,6 +59,9 @@ input[type="checkbox"] {
 .sidebar {
     @include forPhone {
         display: none;
+        height: 0;
+
+        transition: height 1s ease;
     }
 }
 
@@ -79,12 +78,11 @@ button {
     
     @include forPhone {
         display: block;
-
         z-index: 1001;
 
         .fa-times {
             display: none;
-        };
+        }
     }
 
     .fa-times {
@@ -95,24 +93,17 @@ button {
 
 
 nav {
-    // background: $navyBackground;
-    // background: linear-gradient(rgba(255, 255, 255, 0.5) rgba(255, 255, 255, 0.5));
-    // color: $navyBackground;
     color: $navyBackground;
     z-index: 100;
     position: fixed;
     width: 100%;
-    // background: $primaryPink;
-    // z-index: 1000;  
+    height: 0;
+    transition: height 1s ease-in-out, visibility 1s ease-in-out; 
     margin: 0 auto;
     max-width: 1600px;
     display: flex;
     justify-content: center;
-
-    // @include forPhone {
-        background: linear-gradient(rgba(250, 176, 170, 0.9), rgba(250, 176, 170, 0.9));
-    // }
-
+    background: linear-gradient(rgba(250, 176, 170, 0.9), rgba(250, 176, 170, 0.9));
     
 
     ul {
@@ -120,41 +111,48 @@ nav {
         align-content: center;
         align-items: center;
         justify-content: center;
-        // height: 100px;
-
-        // @include forPhone {
-            height: 100vh;
-            flex-direction: column;
-        // }
+        height: 100vh;
+        flex-direction: column;
 
         li {
             
 
             a {
                 display: flex;
-                flex-direction: column;
                 align-items: center;
                 padding: 28px;
                 cursor: pointer;
                 position: relative;
+                font-size: 3.3rem;
                 transition: all 0.5s ease-in-out;
 
-                // &::after {
-                //     content: "";
-                //     background: $primaryPink;
-                //     position: absolute;
-                //     height: 80%;
-                //     width: 90%;
-                //     // left: -5%;
-                //     bottom: 15%;
-                //     opacity: 0.5;
-                //     z-index: -1;
-                // }
+                
 
+                i {
+                    margin-right: 15px;
+                }
+                
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 10px;
+                    left: 10%;
+                    opacity: 0;
+                    width: 0;
+                    height: 3px;
+                    z-index: 1;
+                    transition: width 0.3s;
+                    background-color: $navyBackground;
+                }
                 &:hover, &:focus, &:active {
-                background: $navyBackground;
-                color: $primaryPink;  
-                border-radius: 5px; 
+                    background-color: rgba(255, 255, 255, 0.3);
+                    border-radius: 5px;
+
+                &::after {
+                    opacity: 1;
+                    width: 80%;
+                }
+
             }
             }
         }
@@ -162,7 +160,6 @@ nav {
 }
 
 .headerContainer {
-    // color: $navyBackground;
     color:white;
     align-items: center;
     display: flex;

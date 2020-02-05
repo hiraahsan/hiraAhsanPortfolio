@@ -8,8 +8,6 @@ $pinkBackground: #ffada6;
 $navyBackground: #1f2041;
 $blueBackground: #f7fbff;
 
-// from page_services and home startup
-
 @mixin forSmallPhone {
   @media (max-width: 450px) { @content; }
 }
