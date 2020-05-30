@@ -508,6 +508,36 @@ nav ul li a:hover::after, nav ul li a:focus::after, nav ul li a:active::after {
   position: fixed;
 }
 
+.skip-to-content-link {
+  background: white;
+  height: 30px;
+  left: 50%;
+  padding: 8px;
+  color: #1f2041;
+  position: absolute;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.skip-to-content-link:focus {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+  z-index: 10;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.skip-to-content-link:focus:hover {
+  color: white;
+  background-color: #1f2041;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
 .aboutSection {
   display: -webkit-box;
   display: -ms-flexbox;
