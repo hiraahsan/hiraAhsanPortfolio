@@ -208,9 +208,13 @@
 
                 <div class="formSection">
                     <h3>contact</h3>
-                    <form action="http://www.focuspocus.io/magic/50135f36d3559e57469ecdd8444f145b" method="POST" enctype="multipart/form-data">
-                        <input type="text" name="name" placeholder="Name">
+                    <form id="myForm" action="http://www.focuspocus.io/magic/50135f36d3559e57469ecdd8444f145b" method="POST" enctype="multipart/form-data">
+                        <label for="name" class="visuallyHidden">Name</label>
+                        <input type="text" name="name"  id="name" placeholder="Name">
+                        <label for="email" class="visuallyHidden">Email</label>
                         <input type="email" name="email" id="email" placeholder="Email">
+                        <label for="message" class="visuallyHidden">Message</label>
+
                         <textarea type="message" id="message" name="Message" cols="35" rows="10" placeholder="Message"></textarea>
                         <input type="submit" value="Submit">
                     </form>

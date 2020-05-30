@@ -4,6 +4,9 @@ AOS.init({
     disable: "mobile",
 })
 
+const name = document.getElementById('name');
+const email = document.getElementById('email');
+const message = document.getElementById('message');
 
 
 $(document).ready(function () {
@@ -21,6 +24,12 @@ $(document).ready(function () {
 
     $('form').submit( (e) => {
         e.preventDefault();
-        console.log($('input'.value))
+        if (((name && name.value) && (email && email.value) && (message && message.value)) === "") {
+            alert('Please complete all the fields before submitting!');
+        } else {
+            document.getElementById('myForm').submit();
+
+        }
+
     })
 })
